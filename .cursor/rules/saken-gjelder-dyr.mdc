@@ -1,0 +1,17 @@
+---
+description: Prosjektvalg og oppstart for Saken gjelder dyr
+alwaysApply: true
+---
+
+Les CURSOR-START-HER.md og PROJECT-BRIEF.md før du endrer prosjektet.
+
+- Fortsett i det eksisterende prosjektet; behold dagens design og innhold til brukeren ber om endringer.
+- Behold navnet «Saken gjelder» på første linje og «dyr.» på andre.
+- Forsiderekkefølge: presentasjon → saker → motivasjon → saksvarsler → kontakt.
+- E-posttilbudet heter saksvarsler. Påmelding er ikke aktiv ennå.
+- Bruk «høringsuttalelse», ikke «høringssvar».
+- Behold synlige kilder. Ikke gjeninnfør illustrasjoner, konseptskisse eller ruten `/retninger` (arkivert under `archive/`).
+- Bekreft gjeldende status i primærkilder før saksopplysninger eller frister endres.
+- Kildehenvisninger skal vise relevant punkt, avsnitt eller PDF-side, og stå ved påstanden de underbygger. Når nettstedets kapittellenker er upålitelige, siter det relevante avsnittet og oppgi nøyaktig sted; ikke stol på dype anker alene.
+- Arbeid lokalt; publiser eller endre deling bare etter uttrykkelig beskjed.
+- Håndter kode og oppsett selv, og forklar kort på norsk hva brukeren kan se eller gjøre.
