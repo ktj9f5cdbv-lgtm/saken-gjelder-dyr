@@ -22,6 +22,8 @@ export function Header() {
   );
 }
 
+const SAKSVARSLER_URL = "https://sendbrev.eu/saken-gjelder-dyr";
+
 export function Newsletter() {
   return (
     <section className="newsletter" id="saksvarsler" aria-labelledby="saksvarsler-title">
@@ -30,7 +32,14 @@ export function Newsletter() {
         <p>
           Saksvarsler på e-post om nye høringer som angår dyr, viktige frister og utviklingen i sakene vi følger — med forklaring på hva du kan gjøre.
         </p>
-        <p className="coming-soon">Påmelding kommer.</p>
+        <a
+          className="coral-button"
+          href={SAKSVARSLER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Få saksvarsler <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </section>
   );

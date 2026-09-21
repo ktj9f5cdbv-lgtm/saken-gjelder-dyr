@@ -43,9 +43,9 @@ Overskrift: **Få beskjed når du kan påvirke**
 
 Forklaring: Saksvarsler på e-post om nye høringer som angår dyr, viktige frister og utviklingen i sakene vi følger — med forklaring på hva du kan gjøre.
 
-Når påmelding faktisk kobles til, er ønsket knappetekst **Få saksvarsler**. Nå står «Påmelding kommer.» Ingen påmeldingsfunksjon eller utsending er implementert. Ikke vis en falsk bekreftelse på at en leser er påmeldt.
+Knappetekst: **Få saksvarsler**. Påmelding er koblet til ekstern påmeldingsside (`https://sendbrev.eu/saken-gjelder-dyr`). Ikke vis en falsk bekreftelse på at en leser er påmeldt på vår egen side.
 
-Brev/sendbrev.eu kan bli den tekniske leverandøren. Brukeren har fått tilbud om gratis bruk fra vennen som driver tjenesten for eget nyhetsbrev. Det er ikke avklart noen teknisk integrasjon. Leverandørnavnet skal ikke inn i vanlig lesertekst eller navigasjon.
+Teknisk leverandør er Brev/sendbrev.eu (vennens tjeneste). Leverandørnavnet skal ikke inn i vanlig lesertekst eller navigasjon.
 
 ## Personlig motivasjon
 
@@ -110,7 +110,7 @@ Primærkilder for grisesaken:
 
 ## Videre arbeid
 
-1. Sette kontakt-e-post før lansering (`CONTACT_EMAIL` i `app/site-parts.tsx`).
+1. ~~Sette kontakt-e-post~~ — satt til `kontakt@sakengjelderdyr.no`.
 2. Gjennomgå fullstendige høringsvedlegg for høner og hesteutstyr.
 3. Visuell kontroll av mobilvisning.
 4. Koble saksvarsler til e-posttjeneste når tilgangen er avklart.
