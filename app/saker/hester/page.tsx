@@ -57,12 +57,20 @@ export default function HorseCase() {
           </p>
         </section>
 
-        <section className="case-block" aria-labelledby="mening">
-          <h2 id="mening">Hva kan du si din mening om?</h2>
-          <p className="stance">
-            <strong>Saken gjelder dyr ønsker en utredning som gir et tydelig grunnlag for å beskytte hester mot skadelig og belastende utstyr.</strong> Dette er vårt standpunkt.
+        <section className="case-block" aria-labelledby="hvorfor-uttalelse">
+          <h2 id="hvorfor-uttalelse">Hvorfor sende en høringsuttalelse?</h2>
+          <p>
+            En høringsuttalelse gjør myndighetene kjent med hva du mener bør undersøkes, og hvorfor det er viktig.
           </p>
-          <p>Du kan for eksempel be om at:</p>
+          <p>
+            Du kan støtte et forslag andre allerede har fremmet. Da viser uttalelsen at også du ønsker dette undersøkt. Antallet uttalelser avgjør ikke utfallet alene, og vi kan ikke love hvilket gjennomslag et innspill får.
+          </p>
+          <p>
+            Du trenger ikke ha erfaring med hest eller foreslå noe nytt. Du kan forklare hvilke hensyn du mener vurderingen bør ta. Egne erfaringer og fagkunnskap er også velkomne dersom du har dem.
+          </p>
+          <p>
+            Nedenfor forklarer vi hva Saken gjelder dyr mener bør være med i vurderingen. Du kan støtte punktene du er enig i, foreslå noe annet eller kommentere bare én del.
+          </p>
           <ul className="case-bullets">
             <li>
               <strong>Pisk nevnes uttrykkelig.</strong> Pisk står ikke på utstyrslisten. Mattilsynet åpner for å undersøke annet relevant utstyr, men en uttrykkelig omtale vil gjøre bestillingen tydeligere.
