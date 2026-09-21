@@ -8,10 +8,7 @@ export default function Home() {
         <section className="editorial-intro" aria-labelledby="intro-title">
           <h1 id="intro-title">Finn ut når og hvordan du kan påvirke</h1>
           <p className="intro-text">
-            Politiske beslutninger former dyrs hverdag. Saken gjelder dyr gjør det enklere å forstå aktuelle forslag og delta før avgjørelsene tas.
-          </p>
-          <p className="intro-text">
-            Her finner du utvalgte saker, frister og veiledning til hvordan du kan sende en høringsuttalelse eller kontakte en politiker. Kildene følger saken, slik at du kan undersøke grunnlaget selv.
+            Politiske beslutninger former dyrs hverdag. Her får du aktuelle saker, frister og en enkel vei til å sende høringsuttalelse eller kontakte en politiker — med kilder du kan sjekke selv.
           </p>
         </section>
 

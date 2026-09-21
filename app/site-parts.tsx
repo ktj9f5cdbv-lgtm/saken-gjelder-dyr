@@ -15,6 +15,7 @@ export function Header() {
         <nav aria-label="Hovedmeny">
           <a href="/#saken">Saker</a>
           <a href="/#om-siden">Hvorfor?</a>
+          <a href="/#saksvarsler">Saksvarsler</a>
           <a href="/#kontakt">Kontakt</a>
         </nav>
       </header>
@@ -78,7 +79,7 @@ export function Footer() {
       </a>
       <p>Det er de som må leve med vedtaket.</p>
       <small>
-        Under utvikling · 2026 · <a href="/#kontakt">Kontakt</a>
+        2026 · <a href="/#kontakt">Kontakt</a>
       </small>
     </footer>
   );

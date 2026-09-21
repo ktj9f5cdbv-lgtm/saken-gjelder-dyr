@@ -19,15 +19,18 @@ export default function PigCase() {
         <header className="article-heading">
           <p className="kicker">Griser · Regelverk</p>
           <h1>Bedre regler for griser: Etterspør status og tidsplan</h1>
+          <p className="article-deck">
+            Mange griser lever fortsatt under gamle minimumsregler for plass, underlag og miljø. Stortinget har bedt om bedre krav — men tidsplanen er uklar. Du kan be en politiker følge opp.
+          </p>
         </header>
 
         <section className="case-block" aria-labelledby="om-saken">
           <h2 id="om-saken">Hva saken gjelder</h2>
           <p>
-            <a href={vedtak}>Stortingets vedtak 563</a> ber regjeringen snarest gjennomgå og endre forskrift om hold av svin. Vedtaket omfatter økte krav til areal, mykt underlag og bedre miljøberikelse, samt strengere krav ved oppgraderinger og nybygg.
+            <a href={vedtak}>Stortingets vedtak 563</a> ber regjeringen snarest gjennomgå og endre forskriften om hold av svin. Vedtaket gjelder mer plass, mykere underlag og bedre miljøberikelse — og strengere krav ved oppgraderinger og nybygg.
           </p>
           <p>
-            Mattilsynet skriver at forskriftens minimumsregler om levemiljø ikke lenger er i tråd med oppdatert kunnskap om dyrevelferd:
+            Mattilsynet skriver at minimumsreglene om levemiljø ikke lenger følger oppdatert kunnskap om dyrevelferd:
           </p>
           <blockquote className="source-quote">
             <p>«Forskriften om hold av svin er over tjue år gammel og inneholder minimumsregler om levemiljø som ikke lenger er i tråd med oppdatert kunnskap om dyrevelferd.»</p>

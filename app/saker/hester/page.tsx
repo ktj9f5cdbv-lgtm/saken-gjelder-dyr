@@ -7,6 +7,8 @@ export const metadata: Metadata = {
 
 const hearingInfo = "https://www.mattilsynet.no/hoeringer?bId=3994";
 const hearingSubmit = "https://hoering.mattilsynet.no/Hoering/3994";
+const privateSubmission =
+  "https://hoering.mattilsynet.no/hoering/3994/uttalelse/130d48b0-e57d-4bc3-94d9-4925489088a5";
 
 export default function HorseCase() {
   return (
@@ -32,13 +34,12 @@ export default function HorseCase() {
         <section className="case-block" aria-labelledby="forslaget">
           <h2 id="forslaget">Hva går forslaget ut på?</h2>
           <p>
-            Mattilsynet skal bestille en vurdering fra Vitenskapskomiteen for mat og miljø (VKM). Den skal undersøke risiko for dårligere hestevelferd på kort og lang sikt.
+            Mattilsynet skal be Vitenskapskomiteen for mat og miljø (VKM) — et fagorgan som vurderer risiko — om å undersøke hvordan utstyr kan gå ut over hestevelferd på kort og lang sikt.
           </p>
           <p>
             Bestillingen omfatter blant annet bitt, bittløse hodelag, nesereimer, sporer, tungestropp og utstyr som begrenser hestens bevegelser. Også tilpasning og bruk skal vurderes.
           </p>
           <p>
-            Utredningen skal gi grunnlag for å vurdere senere tiltak, inkludert mulige forbud.{" "}
             <strong>Denne høringen gjelder hva som skal undersøkes. Det foreligger ikke et ferdig forslag til utstyrsforbud.</strong>
           </p>
           <p className="source-note">
@@ -50,26 +51,17 @@ export default function HorseCase() {
         <section className="case-block" aria-labelledby="for-hestene">
           <h2 id="for-hestene">Hva betyr det for hestene?</h2>
           <p>
-            Hva vi undersøker nå, påvirker kunnskapsgrunnlaget for senere regler. Derfor er det relevant å be om at vurderingen fanger opp hestenes opplevelse av utstyret: smerte, ubehag, frykt og begrensninger i bevegelse.
-          </p>
-          <p>
-            Vi mener utredningen bør undersøke belastninger både ved anbefalt bruk og ved feilbruk av utstyret. Vi mener undersøkelsen også bør se på om utstyret påfører hesten smerte eller frykt uten å etterlate synlige skader.
+            Det som undersøkes nå, blir grunnlaget for senere regler. Vi mener vurderingen bør fange opp hestenes opplevelse — smerte, ubehag, frykt og begrenset bevegelse — både ved anbefalt bruk og ved feilbruk, også når skadene ikke synes utenpå.
           </p>
         </section>
 
         <section className="case-block" aria-labelledby="hvorfor-uttalelse">
           <h2 id="hvorfor-uttalelse">Hvorfor sende en høringsuttalelse?</h2>
           <p>
-            En høringsuttalelse gjør myndighetene kjent med hva du mener bør undersøkes, og hvorfor det er viktig.
+            En høringsuttalelse gjør myndighetene kjent med hva du mener bør undersøkes, og hvorfor det er viktig. Du kan støtte et forslag andre allerede har fremmet. Antallet uttalelser avgjør ikke utfallet alene, og vi kan ikke love hvilket gjennomslag et innspill får.
           </p>
           <p>
-            Du kan støtte et forslag andre allerede har fremmet. Da viser uttalelsen at også du ønsker dette undersøkt. Antallet uttalelser avgjør ikke utfallet alene, og vi kan ikke love hvilket gjennomslag et innspill får.
-          </p>
-          <p>
-            Du trenger ikke ha erfaring med hest eller foreslå noe nytt. Du kan forklare hvilke hensyn du mener vurderingen bør ta. Egne erfaringer og fagkunnskap er også velkomne dersom du har dem.
-          </p>
-          <p>
-            Nedenfor forklarer vi hva Saken gjelder dyr mener bør være med i vurderingen. Du kan støtte punktene du er enig i, foreslå noe annet eller kommentere bare én del.
+            Du trenger ikke ha erfaring med hest. Nedenfor er det Saken gjelder dyr mener bør være med. Du kan støtte punktene du er enig i, foreslå noe annet eller kommentere bare én del.
           </p>
           <ul className="case-bullets">
             <li>
@@ -84,10 +76,14 @@ export default function HorseCase() {
           </ul>
           <p className="source-note">
             <a href={hearingInfo} target="_blank" rel="noopener noreferrer">Mattilsynets høringsside</a>
-            <span>Utstyrslisten og avsnittet rett etter listen (om at eksemplene ikke begrenser utvalget). Punktene over er våre forslag til høringsuttalelsen.</span>
+            <span>Utstyrslisten og avsnittet rett etter listen. Punktene over er våre forslag.</span>
           </p>
           <p>
-            Skriv hva du selv mener og hvorfor. Har du erfaring med hest, kan du beskrive konkrete observasjoner og skille dem fra hva du tror er årsaken. Du trenger ikke kommentere alt utstyret.
+            Jørund Moltubakk har sendt inn som privatperson.{" "}
+            <a href={privateSubmission} target="_blank" rel="noopener noreferrer">
+              Les uttalelsen på Mattilsynets høringsside
+            </a>
+            . Den er ikke sendt på vegne av nettstedet.
           </p>
         </section>
 
@@ -114,7 +110,7 @@ export default function HorseCase() {
           <div className="help-box">
             <h3>Hjelp til å komme i gang</h3>
             <p>
-              Hva ønsker du at VKM skal undersøke? Hvorfor er det viktig for hestene? Har du erfaringer eller kilder som kan belyse spørsmålet?
+              Hva ønsker du at skal undersøkes? Hvorfor er det viktig for hestene? Har du egne erfaringer, kan du beskrive dem kort.
             </p>
           </div>
         </section>
@@ -159,6 +155,12 @@ export default function HorseCase() {
                 Høringstjenesten for uttalelse <span aria-hidden="true">↗</span>
               </a>
               <p>Der du sender inn høringsuttalelsen.</p>
+            </li>
+            <li>
+              <a href={privateSubmission} target="_blank" rel="noopener noreferrer">
+                Høringsuttalelse fra Jørund Moltubakk <span aria-hidden="true">↗</span>
+              </a>
+              <p>Innsendt som privatperson, ikke på vegne av nettstedet.</p>
             </li>
           </ul>
         </section>

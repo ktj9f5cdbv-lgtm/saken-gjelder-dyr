@@ -25,11 +25,13 @@ Behold «Saken gjelder» samlet. Den valgte setningen som uttrykker formålet, e
 
 Rekkefølge:
 
-1. Kort presentasjon med hovedoverskriften «Finn ut når og hvordan du kan påvirke»
+1. Kort presentasjon med hovedoverskriften «Finn ut når og hvordan du kan påvirke» (ett kort avsnitt)
 2. Aktuelle saker
 3. Motivasjon: «Hvorfor Saken gjelder dyr?» (metodisk skille kilder / forslag / vårt syn; privat initiativ startet av Jørund Moltubakk)
 4. Saksvarsler
 5. Kontakt (for feil og innholdsspørsmål)
+
+Meny: Saker · Hvorfor? · Saksvarsler · Kontakt.
 
 Den gamle seksjonen «Hvorfor jeg lagde siden» brukes ikke.
 
@@ -113,7 +115,7 @@ Primærkilder for grisesaken:
 1. ~~Sette kontakt-e-post~~ — satt til `kontakt@sakengjelderdyr.no`.
 2. Gjennomgå fullstendige høringsvedlegg for høner og hesteutstyr.
 3. Visuell kontroll av mobilvisning.
-4. Koble saksvarsler til e-posttjeneste når tilgangen er avklart.
+4. ~~Koble saksvarsler til e-posttjeneste~~ — påmelding går via ekstern side.
 5. Eventuelle dokumentariske bilder bare med avklart bruksrett.
 
 Nettsiden skal fortsatt være privat. Ikke gjør den offentlig uten en uttrykkelig ny beskjed fra brukeren.

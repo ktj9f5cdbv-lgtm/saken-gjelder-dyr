@@ -33,15 +33,16 @@ export default function HenCase() {
         <section className="case-block" aria-labelledby="forslaget">
           <h2 id="forslaget">Hva går forslaget ut på?</h2>
           <p>
-            Tradisjonelle bur er allerede forbudt. Forslaget gjelder også innredede bur, som fortsatt er tillatt.
+            De gamle, bare burene er allerede forbudt. Forslaget gjelder også{" "}
+            <strong>innredede bur</strong> — bur med litt ekstra utstyr inni, som fortsatt er lov i dag.
           </p>
           <p>Det foreslås to trinn:</p>
           <ul className="case-bullets">
             <li>
-              Når endringsforskriften trer i kraft, skal det bli forbudt å etablere nye verpehønebesetninger med bur eller installere nye innredede bur i eksisterende besetninger.
+              Når den nye forskriften trer i kraft: forbud mot å starte nye hønseflokker i bur, og mot å sette inn nye innredede bur der det allerede holdes høner.
             </li>
             <li>
-              Fra <strong>1. januar 2030</strong> skal det bli forbudt å holde verpehøns i innredede bur.
+              Fra <strong>1. januar 2030</strong>: forbud mot å holde verpehøns i innredede bur.
             </li>
           </ul>
           <p>
@@ -56,36 +57,33 @@ export default function HenCase() {
         <section className="case-block" aria-labelledby="for-honene">
           <h2 id="for-honene">Hva betyr det for hønene?</h2>
           <p>
-            Høner trenger plass til å bevege seg og muligheter til blant annet å undersøke omgivelsene, søke etter mat og stelle fjærdrakten. Den europeiske myndigheten for næringsmiddeltrygghet, EFSA, anbefaler systemer uten bur, blant annet med lett tilgjengelige opphøyde plattformer og tørt, løst strø:
+            Høner trenger plass til å bevege seg og mulighet til blant annet å undersøke omgivelsene, søke etter mat og stelle fjærdrakten. Den europeiske myndigheten for næringsmiddeltrygghet (EFSA) anbefaler systemer uten bur, med lett tilgjengelige opphøyde plattformer, tørt og løst strø, og tilgang til overbygd veranda.
           </p>
-          <blockquote className="source-quote">
-            <p>
-              «Main recommendations include housing all birds in non-cage systems with easily accessible, elevated platforms and provision of dry and friable litter and access to a covered veranda.»
-            </p>
-          </blockquote>
           <p className="source-note">
             <a href={efsa} target="_blank" rel="noopener noreferrer">EFSA, «Welfare of laying hens on farm» (2023)</a>
-            <span>Abstract. Engelsk originaltekst.</span>
+            <span>Abstract. Anbefalingen er gjengitt på norsk her; originalen er på engelsk.</span>
           </p>
           <p>
             Burfrie systemer krever også god utforming og drift. Et burforbud løser ikke alene problemer som skade, fjærhakking og for høy dyretetthet.
           </p>
         </section>
 
-        <section className="case-block" aria-labelledby="mening">
-          <h2 id="mening">Hva kan du si din mening om?</h2>
+        <section className="case-block" aria-labelledby="hvorfor-uttalelse">
+          <h2 id="hvorfor-uttalelse">Hvorfor sende en høringsuttalelse?</h2>
+          <p>
+            En høringsuttalelse gjør myndighetene kjent med hva du mener, og hvorfor det er viktig. Du kan støtte et forslag andre allerede har fremmet. Antallet uttalelser avgjør ikke utfallet alene, og vi kan ikke love hvilket gjennomslag et innspill får.
+          </p>
           <p className="stance">
             <strong>Saken gjelder dyr støtter et forbud og mener overgangen bør gjennomføres så raskt som mulig av hensyn til hønene.</strong> Dette er vårt standpunkt.
           </p>
-          <p>Du kan for eksempel:</p>
+          <p>
+            Nedenfor er punkter du kan bruke. Du kan støtte det du er enig i, foreslå noe annet eller kommentere bare én del.
+          </p>
           <ul className="case-bullets">
             <li>støtte at alle former for burhold av verpehøns forbys;</li>
             <li>be om en tidligere sluttdato enn 2030;</li>
             <li>be om at hønenes velferd i overgangsperioden får tydelig vekt i vurderingen.</li>
           </ul>
-          <p>
-            Skriv hva du selv mener og hvorfor. Du trenger ikke ha synspunkter på alle deler av forslaget.
-          </p>
         </section>
 
         <section className="case-block next-action" id="pavirke" aria-labelledby="slik-sender">
@@ -111,7 +109,7 @@ export default function HenCase() {
           <div className="help-box">
             <h3>Hjelp til å komme i gang</h3>
             <p>
-              Ta utgangspunkt i tre spørsmål: Støtter du forbudet? Hva mener du om sluttdatoen? Hvorfor er dette viktig for deg?
+              Støtter du forbudet? Hva mener du om sluttdatoen? Hvorfor er dette viktig for deg?
             </p>
           </div>
         </section>
@@ -161,7 +159,7 @@ export default function HenCase() {
               <a href={efsa} target="_blank" rel="noopener noreferrer">
                 EFSA: Welfare of laying hens on farm (2023) <span aria-hidden="true">↗</span>
               </a>
-              <p>Abstract, anbefaling om systemer uten bur.</p>
+              <p>Abstract, anbefaling om systemer uten bur (engelsk originaltekst).</p>
             </li>
           </ul>
         </section>
