@@ -53,7 +53,7 @@ export default function HorseCase() {
             Hva vi undersøker nå, påvirker kunnskapsgrunnlaget for senere regler. Derfor er det relevant å be om at vurderingen fanger opp hestenes opplevelse av utstyret: smerte, ubehag, frykt og begrensninger i bevegelse.
           </p>
           <p>
-            Vi mener utredningen bør undersøke belastninger både ved anbefalt bruk og ved feilbruk av utstyret. Smerte, frykt og ubehag bør vurderes også når hesten ikke har synlige skader.
+            Vi mener utredningen bør undersøke belastninger både ved anbefalt bruk og ved feilbruk av utstyret. Vi mener undersøkelsen også bør se på om utstyret påfører hesten smerte eller frykt uten å etterlate synlige skader.
           </p>
         </section>
 
