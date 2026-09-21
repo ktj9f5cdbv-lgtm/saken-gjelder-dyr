@@ -1,0 +1,11 @@
+.sites-runtime
+node_modules
+.next
+.vercel
+.env*
+.wrangler
+.vinext
+dist
+archive/chatgpt-export
+*.png
+.git

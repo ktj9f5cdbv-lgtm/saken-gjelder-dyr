@@ -1,8 +1,7 @@
 /**
  * Kontaktadresse for feilmeldinger og innholdsspørsmål.
- * Sett til faktisk adresse før lansering.
  */
-export const CONTACT_EMAIL = "";
+export const CONTACT_EMAIL = "kontakt@sakengjelderdyr.no";
 
 export function Header() {
   return (
