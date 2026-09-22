@@ -37,4 +37,4 @@ Prosjektet er en vanlig Next.js-app og kan kobles til GitHub og Vercel.
 - Mobiltilpasset, lys redaksjonell design
 - Tidligere designforsøk og ChatGPT-eksportrester i `archive/` (ikke publiserte sider)
 
-Saksvarsler er presentert som et kommende tilbud. Påmelding er ikke koblet til en tjeneste ennå.
+Saksvarsler kan meldes på via knappen «Få saksvarsler» på forsiden.

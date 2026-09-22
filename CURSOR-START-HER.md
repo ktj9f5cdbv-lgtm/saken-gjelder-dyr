@@ -29,6 +29,10 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `app/saker/griser/letter.tsx` | Kopierbart politisk brevutkast |
 | `app/globals.css` | Felles stil og mobiltilpasning |
 | `app/layout.tsx` | Språk og sidemetadata |
+| `app/pavirk/stortingsrepresentant/page.tsx` | Veiledning: kontakt stortingsrepresentant |
+| `content/representatives/` | Felles representantdata |
+| `content/case-contacts/` | Saksvise kontaktforslag |
+| `components/case-contact-module.tsx` | Saksmodul for representantkontakt |
 | `archive/` | Tidligere designforsøk og ChatGPT-eksport — **ikke** publiserte sider |
 
 ## Avgrensning

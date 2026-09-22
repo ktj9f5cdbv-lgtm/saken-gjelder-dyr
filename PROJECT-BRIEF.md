@@ -31,7 +31,17 @@ Rekkefølge:
 4. Saksvarsler
 5. Kontakt (for feil og innholdsspørsmål)
 
-Meny: Saker · Hvorfor? · Saksvarsler · Kontakt.
+Meny: Saker · Påvirk · Hvorfor? · Saksvarsler · Kontakt.
+
+## Stortingskontakt
+
+Generell veiledning: `/pavirk/stortingsrepresentant`.
+
+Felles representantdata: `content/representatives/`. Saksvise forslag: `content/case-contacts/`. Modulen `CaseContactModule` vises bare når det finnes redaksjonelt innhold.
+
+Skill mellom dokumentert engasjement og relevans via komitérolle/maktposisjon. Ikke merkelapper som «dyrevennlig». Ikke antyd at komitémedlemskap = støtte til sakens krav.
+
+For grisesaken (kontrollert 22. september 2026 mot stortinget.no): Une Bastholm (skriftlig spørsmål qnid 116157 + nestleder Næringskomiteen), Ingrid Fiskaa og Geir Jørgensen (medlemmer). I Innst. 452 S (2025–2026), avsnittet om svin, er SV, Rødt og MDG blant dem som henstiller til høyere prioritet for oppfølging av vedtak 382 og 563. Rune Støstad (leder av Næringskomiteen) er foreslått ut fra maktposisjon — ikke som dokumentert støttespiller i den merknaden.
 
 Den gamle seksjonen «Hvorfor jeg lagde siden» brukes ikke.
 
@@ -81,7 +91,7 @@ Nettsiden følger tre saker:
 
 1. **Høner ut av bur** — åpen Mattilsyn-høring om forbud mot innredede bur for verpehøns. Høringsfrist 1. oktober 2026. Forslaget har to trinn (stopp for nye bur ved ikrafttredelse; totalforbud foreslått fra 1. januar 2030). Datoene er forslag, ikke vedtak. Leseren kan sende høringsuttalelse via Mattilsynets høringstjeneste. Redaksjonelt standpunkt: støtte forbud og raskest mulig overgang av hensyn til hønene. Hovedopplysninger er kontrollert mot Mattilsynets høringsside; fullstendige høringsvedlegg gjenstår å gjennomgå.
 2. **Utstyr til hest** — åpen Mattilsyn-høring om bestilling til VKM om hvordan utstyr påvirker hestevelferd. Høringsfrist 1. oktober 2026. Høringen gjelder hva som skal undersøkes, ikke et ferdig utstyrsforbud. Redaksjonelt standpunkt: utredning som gir tydelig grunnlag for å beskytte hester mot skadelig og belastende utstyr; forslag om blant annet uttrykkelig omtale av pisk. Hovedopplysninger er kontrollert mot Mattilsynets høringsside; fullstendige høringsvedlegg gjenstår å gjennomgå.
-3. **Bedre regler for griser** — oppfølging av Stortingets vedtak 563. Sidene skiller mellom en konkret høring om fødebinger/fiksering og det bredere arbeidet med regler for levemiljø. Den viste høringsfristen 19. juni 2026 er passert. Utfallet og tidsplanen for bredere endringer er ikke bekreftet på siden. Leseren kan oppfordre en stortingsrepresentant til å følge opp arbeidet. Brevutkastet er politisk påvirkning, ikke en høringsuttalelse.
+3. **Bedre regler for griser** — oppfølging av Stortingets vedtak 563. Sidene skiller mellom en konkret høring om fødebinger/fiksering og det bredere arbeidet med regler for levemiljø. Den viste høringsfristen 19. juni 2026 er passert. Utfallet og tidsplanen for bredere endringer er ikke bekreftet på siden. Leseren kan oppfordre en stortingsrepresentant til å følge opp arbeidet (saksmodul med begrunnede kontaktforslag). Brevutkastet er politisk påvirkning, ikke en høringsuttalelse.
 
 Ikke fremstill en utgått høring som åpen eller et forslag som vedtatt.
 
@@ -108,7 +118,7 @@ Primærkilder for grisesaken:
 - [Høringen om fødebinger](https://www.mattilsynet.no/hoeringer?bId=3822)
 - [Forskrift om hold av svin](https://lovdata.no/dokument/SF/forskrift/2003-02-18-175)
 - [Stortingets vedtak i saken](https://www.stortinget.no/no/Saker-og-publikasjoner/Vedtak/Vedtak/Sak/?p=101263)
-- [Spørsmål til statsråden og svar](https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qid=116157)
+- [Spørsmål til statsråden og svar](https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=116157)
 
 ## Videre arbeid
 
@@ -117,5 +127,6 @@ Primærkilder for grisesaken:
 3. Visuell kontroll av mobilvisning.
 4. ~~Koble saksvarsler til e-posttjeneste~~ — påmelding går via ekstern side.
 5. Eventuelle dokumentariske bilder bare med avklart bruksrett.
+6. Vedlikehold representanters e-post/roller i `content/representatives/` ved endringer på stortinget.no.
 
 Nettsiden skal fortsatt være privat. Ikke gjør den offentlig uten en uttrykkelig ny beskjed fra brukeren.

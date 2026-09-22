@@ -312,6 +312,137 @@ footer p { margin: 0; }
 .letter-draft textarea { resize: vertical; width: 100%; display: block; border: 1px solid var(--hairline); padding: 18px; margin: 20px 0; background: #fffdf9; color: var(--ink); font: 400 1rem/1.6 Arial, sans-serif; border-radius: 3px; }
 .editorial .copy-status { font-size: .875rem; margin: 12px 0 0; }
 .copy-status:empty { display: none; }
+
+/* Stortingskontakt */
+.case-contact-subtitle {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1.25;
+  margin: 32px 0 10px;
+}
+.case-contact-lead {
+  color: var(--muted);
+  font-size: .9875rem;
+  margin-bottom: 22px;
+  max-width: 40rem;
+}
+.case-contact-guide { margin-top: 28px; margin-bottom: 0; }
+.case-contact-help { margin-top: 28px; }
+.case-contact-help .case-bullets { margin-bottom: 14px; }
+.rep-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 8px 0 8px;
+}
+.rep-card {
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 22px 22px 18px;
+  background: var(--surface);
+  max-width: 720px;
+}
+.rep-card-header { margin-bottom: 18px; }
+.rep-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1.25;
+  margin: 0 0 6px;
+}
+.rep-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: .875rem;
+  line-height: 1.45;
+}
+.rep-party { color: var(--ink); font-weight: 500; }
+.rep-meta-sep { margin: 0 0.35em; }
+.rep-roles { color: var(--muted); }
+.rep-section { margin: 0 0 16px; }
+.rep-section:last-child { margin-bottom: 0; }
+.rep-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+.rep-card-body p {
+  margin: 0 0 0;
+  font-size: .9875rem;
+  line-height: 1.55;
+}
+.rep-ask { color: var(--ink); }
+.rep-sources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: .875rem;
+}
+.rep-sources li { margin-bottom: 8px; }
+.rep-sources li:last-child { margin-bottom: 0; }
+.rep-source-note {
+  display: block;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.rep-card-actions {
+  border-top: 1px solid var(--hairline);
+  padding-top: 14px;
+  margin-top: 18px;
+}
+.rep-card-actions p { margin-bottom: 8px; font-size: .9375rem; }
+.rep-card-actions p:last-child { margin-bottom: 0; }
+.rep-email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 0;
+}
+.rep-email-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+}
+.text-button {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: var(--coral);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font: inherit;
+  cursor: pointer;
+}
+.text-button:hover { color: #903a2e; }
+.text-button:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+.rep-email-actions .copy-status {
+  margin: 0;
+  width: 100%;
+  font-size: .8125rem;
+  color: var(--muted);
+}
+.rep-verified {
+  color: var(--muted);
+  font-size: .8125rem !important;
+}
+
+@media (max-width: 720px) {
+  .rep-card { padding: 18px 16px 14px; }
+}
 .article-sources { border-top: 1px solid var(--hairline); padding: 50px 0; }
 .article-sources ul { list-style: none; margin: 25px 0 0; padding: 0; }
 .article-sources li { padding: 18px 0; border-bottom: 1px solid var(--hairline); }

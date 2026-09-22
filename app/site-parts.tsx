@@ -14,6 +14,7 @@ export function Header() {
         </a>
         <nav aria-label="Hovedmeny">
           <a href="/#saken">Saker</a>
+          <a href="/pavirk/stortingsrepresentant">Påvirk</a>
           <a href="/#om-siden">Hvorfor?</a>
           <a href="/#saksvarsler">Saksvarsler</a>
           <a href="/#kontakt">Kontakt</a>

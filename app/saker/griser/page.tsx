@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "../../site-parts";
 import Letter from "./letter";
+import { CaseContactModule } from "@/components/case-contact-module";
+import { griserContact } from "@/content/case-contacts/griser";
 
 export const metadata: Metadata = { title: "Bedre regler for griser | Saken gjelder dyr" };
 
@@ -8,7 +10,6 @@ const guide = "https://www.mattilsynet.no/dyr/produksjonsdyr/svin/veileder-om-ho
 const vedtak = "https://www.stortinget.no/no/Saker-og-publikasjoner/Vedtak/Vedtak/Sak/?p=101263";
 const sporsmal = "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=116157";
 const hearing = "https://www.mattilsynet.no/hoeringer?bId=3822";
-const representanter = "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/";
 
 export default function PigCase() {
   return (
@@ -47,7 +48,6 @@ export default function PigCase() {
           <p>
             Du kan skrive til en stortingsrepresentant og be vedkommende følge opp gjennomføringen av vedtak 563. Brevutkastet nedenfor etterspør hva som er gjort, hva som gjenstår, og når nye krav kan komme.
           </p>
-          <a className="underlined-link" href={representanter}>Finn en representant ↗</a>
           <details className="expandable letter-expander" id="brev">
             <summary>Åpne brevutkast <span aria-hidden="true">+</span></summary>
             <Letter />
@@ -56,6 +56,12 @@ export default function PigCase() {
             Dette er en politisk henvendelse, ikke en høringsuttalelse. Tilpass teksten slik at du står inne for det du sender.
           </p>
         </section>
+
+        <CaseContactModule
+          content={griserContact}
+          letterAnchorId="brev"
+          mailSubject="Oppfølging av vedtak 563 om bedre regler for griser"
+        />
 
         <section className="case-block" aria-labelledby="saksgang-title">
           <h2 id="saksgang-title">Hva vi vet om saksgangen</h2>
