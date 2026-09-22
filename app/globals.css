@@ -313,20 +313,25 @@ footer p { margin: 0; }
 .editorial .copy-status { font-size: .875rem; margin: 12px 0 0; }
 .copy-status:empty { display: none; }
 
-/* Stortingskontakt */
+/* Stortingskontakt — tydelig typografihierarki */
+.case-contact-module > h2 {
+  font-size: 1.8rem;
+}
 .case-contact-subtitle {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   font-weight: 400;
   letter-spacing: -.03em;
   line-height: 1.25;
-  margin: 32px 0 10px;
+  margin: 36px 0 12px;
+  color: var(--ink);
 }
 .case-contact-lead {
   color: var(--muted);
-  font-size: .9875rem;
-  margin-bottom: 22px;
+  font-size: .9375rem;
+  margin: 0 0 24px;
   max-width: 40rem;
+  line-height: 1.55;
 }
 .case-contact-guide { margin-top: 28px; margin-bottom: 0; }
 .case-contact-help { margin-top: 28px; }
@@ -334,52 +339,62 @@ footer p { margin: 0; }
 .rep-card-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin: 8px 0 8px;
+  gap: 22px;
+  margin: 0 0 8px;
 }
 .rep-card {
   border: 1px solid var(--hairline);
   border-radius: 4px;
-  padding: 22px 22px 18px;
+  padding: 24px 24px 18px;
   background: var(--surface);
   max-width: 720px;
 }
-.rep-card-header { margin-bottom: 18px; }
-.rep-name {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
-  font-weight: 400;
-  letter-spacing: -.03em;
-  line-height: 1.25;
-  margin: 0 0 6px;
+.rep-card-header {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hairline);
 }
-.rep-meta {
-  margin: 0;
+.rep-card .rep-name {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 400 !important;
+  letter-spacing: -.035em;
+  line-height: 1.2;
+  margin: 0 0 8px !important;
+  color: var(--ink);
+}
+.rep-card .rep-meta {
+  margin: 0 !important;
   color: var(--muted);
-  font-size: .875rem;
+  font-size: .875rem !important;
   line-height: 1.45;
-}
-.rep-party { color: var(--ink); font-weight: 500; }
-.rep-meta-sep { margin: 0 0.35em; }
-.rep-roles { color: var(--muted); }
-.rep-section { margin: 0 0 16px; }
-.rep-section:last-child { margin-bottom: 0; }
-.rep-label {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: .6875rem;
-  font-weight: 600;
-  letter-spacing: .08em;
+}
+.rep-party { color: var(--ink); font-weight: 600; }
+.rep-meta-sep { margin: 0 0.35em; }
+.rep-roles { color: var(--muted); font-weight: 400; }
+.rep-section { margin: 0 0 18px; }
+.rep-section:last-child { margin-bottom: 0; }
+.rep-card .rep-label {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: .75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 0 0 6px;
-  line-height: 1.4;
+  margin: 0 0 8px !important;
+  line-height: 1.35;
 }
-.rep-card-body p {
-  margin: 0 0 0;
-  font-size: .9875rem;
-  line-height: 1.55;
+.rep-card-body p,
+.rep-card .rep-ask {
+  margin: 0 !important;
+  font-size: 1rem !important;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
 }
-.rep-ask { color: var(--ink); }
 .rep-sources {
   list-style: none;
   margin: 0;
@@ -392,11 +407,12 @@ footer p { margin: 0; }
   display: block;
   color: var(--muted);
   margin-top: 2px;
+  font-size: .8125rem;
 }
 .rep-card-actions {
   border-top: 1px solid var(--hairline);
   padding-top: 14px;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 .rep-card-actions p { margin-bottom: 8px; font-size: .9375rem; }
 .rep-card-actions p:last-child { margin-bottom: 0; }
