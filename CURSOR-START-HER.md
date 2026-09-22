@@ -27,6 +27,8 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `app/saker/hester/page.tsx` | Hestesaken (åpen høring) |
 | `app/saker/griser/page.tsx` | Grisesaken, brevutkast, saksgang og kilder |
 | `app/saker/griser/letter.tsx` | Kopierbart politisk brevutkast |
+| `app/saker/selfangst/page.tsx` | Selfangstsaken: stans statsstøtten |
+| `app/saker/selfangst/letter.tsx` | Kopierbart brevutkast om statsstøtte |
 | `app/globals.css` | Felles stil og mobiltilpasning |
 | `app/layout.tsx` | Språk og sidemetadata |
 | `app/pavirk/stortingsrepresentant/page.tsx` | Veiledning: kontakt stortingsrepresentant |

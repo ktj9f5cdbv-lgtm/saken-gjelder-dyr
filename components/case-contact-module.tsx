@@ -3,6 +3,9 @@ import { RepresentativeCard } from "./representative-card";
 
 const GUIDE_HREF = "/pavirk/stortingsrepresentant";
 
+const DEFAULT_LEAD =
+  "Noen fordi de allerede har tatt opp saken; andre fordi de sitter i en relevant maktposisjon. Komitérolle alene dokumenterer ikke støtte til kravene.";
+
 type Props = {
   content: CaseContactContent;
   letterAnchorId?: string;
@@ -35,7 +38,7 @@ export function CaseContactModule({
 
       <h3 className="case-contact-subtitle">Aktuelle representanter</h3>
       <p className="case-contact-lead">
-        Noen fordi de allerede har tatt opp saken; andre fordi de sitter i en relevant maktposisjon. Komitérolle alene dokumenterer ikke støtte til kravene.
+        {content.representativesLead ?? DEFAULT_LEAD}
       </p>
       <div className="rep-card-list">
         {people.map((link) => (
@@ -46,6 +49,32 @@ export function CaseContactModule({
           />
         ))}
       </div>
+
+      {content.afterRepresentatives ? (
+        <div className="case-contact-after">
+          {content.afterRepresentatives.title ? (
+            <h3 className="case-contact-subtitle">
+              {content.afterRepresentatives.title}
+            </h3>
+          ) : null}
+          <p>{content.afterRepresentatives.body}</p>
+          {content.afterRepresentatives.links &&
+          content.afterRepresentatives.links.length > 0 ? (
+            <ul className="rep-sources">
+              {content.afterRepresentatives.links.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">
+                    {source.label} <span aria-hidden="true">↗</span>
+                  </a>
+                  {source.note ? (
+                    <span className="rep-source-note">{source.note}</span>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      ) : null}
 
       {content.writingHelp ? (
         <div className="help-box case-contact-help">

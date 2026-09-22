@@ -30,6 +30,14 @@ export type CaseContactContent = {
   caseId: string;
   purposeTitle: string;
   purposeBody: string[];
+  /** Overstyrer standardintro under «Aktuelle representanter». */
+  representativesLead?: string;
+  /** Valgfri merknad etter kortene, f.eks. om eget valgdistrikt. */
+  afterRepresentatives?: {
+    title?: string;
+    body: string;
+    links?: SourceRef[];
+  };
   writingHelp?: {
     title: string;
     bullets: string[];

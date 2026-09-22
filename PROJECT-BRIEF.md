@@ -87,11 +87,12 @@ Bildene skal velges med omtanke for hva de faktisk dokumenterer. Unngå idyllise
 
 ## Saker vi følger
 
-Nettsiden følger tre saker:
+Nettsiden følger fire saker:
 
 1. **Høner ut av bur** — åpen Mattilsyn-høring om forbud mot innredede bur for verpehøns. Høringsfrist 1. oktober 2026. Forslaget har to trinn (stopp for nye bur ved ikrafttredelse; totalforbud foreslått fra 1. januar 2030). Datoene er forslag, ikke vedtak. Leseren kan sende høringsuttalelse via Mattilsynets høringstjeneste. Redaksjonelt standpunkt: støtte forbud og raskest mulig overgang av hensyn til hønene. Hovedopplysninger er kontrollert mot Mattilsynets høringsside; fullstendige høringsvedlegg gjenstår å gjennomgå.
 2. **Utstyr til hest** — åpen Mattilsyn-høring om bestilling til VKM om hvordan utstyr påvirker hestevelferd. Høringsfrist 1. oktober 2026. Høringen gjelder hva som skal undersøkes, ikke et ferdig utstyrsforbud. Redaksjonelt standpunkt: utredning som gir tydelig grunnlag for å beskytte hester mot skadelig og belastende utstyr; forslag om blant annet uttrykkelig omtale av pisk. Hovedopplysninger er kontrollert mot Mattilsynets høringsside; fullstendige høringsvedlegg gjenstår å gjennomgå.
 3. **Bedre regler for griser** — oppfølging av Stortingets vedtak 563. Sidene skiller mellom en konkret høring om fødebinger/fiksering og det bredere arbeidet med regler for levemiljø. Den viste høringsfristen 19. juni 2026 er passert. Utfallet og tidsplanen for bredere endringer er ikke bekreftet på siden. Leseren kan oppfordre en stortingsrepresentant til å følge opp arbeidet (saksmodul med begrunnede kontaktforslag). Brevutkastet er politisk påvirkning, ikke en høringsuttalelse.
+4. **Stans statsstøtten til selfangst** — kort, handlingsorientert sak om statlig tilskudd til kommersiell selfangst (1,5 mill. kr i 2026). Handler om statsstøtten, ikke hvalfangst. Representantforslag om å fjerne subsidiene (Dok. 8:152 S / sak 98552) ble ikke vedtatt i 2024; forslagsstillerne Bjørlo og Thorsvik sitter ikke lenger på Stortinget. Leseren kan kontakte dagens representanter, særlig i Næringskomiteen, eller fra eget valgdistrikt.
 
 Ikke fremstill en utgått høring som åpen eller et forslag som vedtatt.
 
@@ -119,6 +120,13 @@ Primærkilder for grisesaken:
 - [Forskrift om hold av svin](https://lovdata.no/dokument/SF/forskrift/2003-02-18-175)
 - [Stortingets vedtak i saken](https://www.stortinget.no/no/Saker-og-publikasjoner/Vedtak/Vedtak/Sak/?p=101263)
 - [Spørsmål til statsråden og svar](https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=116157)
+
+Primærkilder for selfangstsaken:
+
+- [Fiskeridirektoratet — Deltakelse i selfangst 2026](https://www.fiskeridir.no/nyheter/deltakelse-i-selfangst-2026) (tilskudd 1,5 mill. kr)
+- [Forskrift om regulering av fangst av sel i Vesterisen og Østisen i 2026](https://lovdata.no/dokument/SF/forskrift/2026-03-12-398) (§ 3 og § 5)
+- [Stortingssak 98552 / Dok. 8:152 S](https://www.stortinget.no/no/Saker-og-publikasjoner/Saker/Sak/?p=98552) (forslag ikke vedtatt)
+- [Innst. 423 S (2023–2024)](https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Innstillinger/Stortinget/2023-2024/inns-202324-423s/?all=true)
 
 ## Videre arbeid
 

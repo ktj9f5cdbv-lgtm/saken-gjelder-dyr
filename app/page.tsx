@@ -59,6 +59,21 @@ export default function Home() {
               </a>
             </div>
           </article>
+
+          <article className="featured-story text-only secondary-case" aria-labelledby="selfangst-title">
+            <div className="featured-copy">
+              <p className="kicker">Selfangst · Statsstøtte</p>
+              <h2 id="selfangst-title">
+                <a href="/saker/selfangst">Stans statsstøtten til selfangst</a>
+              </h2>
+              <p>
+                I 2026 er det satt av 1,5 millioner kroner i tilskudd til kommersiell selfangst. Stortinget vedtok ikke et forslag om å fjerne støtten i 2024. Du kan be en representant ta saken opp på nytt.
+              </p>
+              <a className="coral-button" href="/saker/selfangst">
+                Se saken og kontakt en representant <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
         </section>
 
         <section className="site-motivation" id="om-siden" aria-labelledby="motivation-title">

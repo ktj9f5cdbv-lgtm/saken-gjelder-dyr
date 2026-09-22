@@ -125,6 +125,9 @@ export default function ContactRepresentativeGuide() {
             <a href="/saker/griser">Bedre regler for griser</a> — representanter med begrunnelse og e-post.
           </p>
           <p>
+            <a href="/saker/selfangst">Stans statsstøtten til selfangst</a> — be om at subsidiene fjernes.
+          </p>
+          <p>
             For åpne høringer er det mer direkte å sende{" "}
             <a href="/saker/honer">høringsuttalelse om høner</a> eller{" "}
             <a href="/saker/hester">høringsuttalelse om hesteutstyr</a> til Mattilsynet.

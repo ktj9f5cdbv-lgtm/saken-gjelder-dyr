@@ -336,6 +336,14 @@ footer p { margin: 0; }
 .case-contact-guide { margin-top: 28px; margin-bottom: 0; }
 .case-contact-help { margin-top: 28px; }
 .case-contact-help .case-bullets { margin-bottom: 14px; }
+.case-contact-after { margin-top: 28px; }
+.case-contact-after > p { margin-bottom: 12px; }
+.case-facts {
+  margin-top: 8px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--hairline);
+}
+.case-facts strong { color: var(--ink); }
 .rep-card-list {
   display: flex;
   flex-direction: column;

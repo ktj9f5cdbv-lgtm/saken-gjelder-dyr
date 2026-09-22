@@ -103,6 +103,31 @@ export const representatives: Record<string, Representative> = {
     ],
     verifiedAt: "2026-09-22",
   },
+  "guri-melby": {
+    id: "guri-melby",
+    name: "Guri Melby",
+    party: "Venstre",
+    roles: [
+      "Stortingsrepresentant for Oslo",
+      "Leder av Venstres stortingsgruppe",
+      "Første nestleder i Utdannings- og forskningskomiteen",
+    ],
+    email: "guri.melby@stortinget.no",
+    profileUrl:
+      "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=GME",
+    profileSources: [
+      {
+        label: "Stortingets biografi for Guri Melby",
+        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=GME",
+        note: "Roller og periode 2025–2029.",
+      },
+      {
+        label: "Representantenes e-postadresser",
+        url: "https://www.stortinget.no/no/Stottemeny/kontakt/representanter-og-partigrupper/Representantenes-e-postadresser/",
+      },
+    ],
+    verifiedAt: "2026-09-22",
+  },
 };
 
 export function getRepresentative(id: string): Representative | undefined {
