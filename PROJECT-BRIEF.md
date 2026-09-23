@@ -78,6 +78,8 @@ Fire handlingstyper (`content/action-types.ts`):
 
 Handlingen skal følge av flaskehalsen, ikke av tema. Bruk «høringsuttalelse» i egen tekst (ikke «høringssvar»).
 
+For **challenge_position**: ikke én generisk eksempelhenvendelse når partienes begrunnelser er forskjellige. Research-rekkefølge: hva ble foreslått → hvem støttet/motsatte → begrunnelse → nyere standpunkt? → endret faktagrunnlag? → konkret spørsmål → relevant kontakt i dag. Skill avstemning, partiinnlegg, statsrådens (regjeringens) argumentasjon, alternativt budsjett og partiprogram. Dater historiske uttalelser. Ikke «Kopier»-knapp på partitilpassede spørsmål.
+
 Generell veiledning: `/pavirk` («Slik kan du påvirke»). Stortingskontakt: `/pavirk/stortingsrepresentant`.
 
 Eksempler skal være korte, dokumenterte, tydelig merket som eksempler, og ofte stille spørsmål snarere enn lange kampanjebrev. Skill alltid historisk standpunkt («Ved behandlingen i 2024 …») fra nåværende partisyn.
@@ -142,7 +144,7 @@ Nettsiden følger fem saker:
 2. **Utstyr til hest** — åpen Mattilsyn-høring om bestilling til VKM om hvordan utstyr påvirker hestevelferd. Høringsfrist 1. oktober 2026. Høringen gjelder hva som skal undersøkes, ikke et ferdig utstyrsforbud. Redaksjonelt standpunkt: utredning som gir tydelig grunnlag for å beskytte hester mot skadelig og belastende utstyr; forslag om blant annet uttrykkelig omtale av pisk. Hovedopplysninger er kontrollert mot Mattilsynets høringsside; fullstendige høringsvedlegg gjenstår å gjennomgå.
 3. **Oppdrettsfisk · fiskevelferd** — åpen innspillsrunde hos Nærings- og fiskeridepartementet om oppfølging av havbruksmeldingen. Status åpen; oppgitt frist 31. oktober 2027 (ikke absolutt). Dødelighet i sjøfasen 2025: 54,9 millioner laks / 14,2 % (nedgang fra 15,4 % i 2024 og 16,7 % i 2023) ifølge Veterinærinstituttet. Leseren kan sende skriftlig innspill. Kontrollert 22. september 2026.
 4. **Bedre regler for griser** — `follow_up_decision`. Ønsket endring: oppdaterte regler for hold av svin. Politisk status: Stortingets vedtak 563 ber regjeringen snarest endre forskriften. Flaskehals: oppfølging/gjennomføring (ingen bekreftet samlet tidsplan for bred forskriftsendring; smal fødebinge-høring er egne vedtak 564/565). Handling: be om oppfølging via stortingsrepresentant. Kontaktbegrunnelser: offentlige kilder (qnid 116157, Innst. 452 S, komitéverv) — ikke private e-poster. Sist kontrollert 23. september 2026.
-5. **Statsstøtte til selfangst** — `challenge_position`. Ønsket endring: fjerne statsstøtten. Flaskehals: manglende parlamentarisk støtte etter Dok. 8:152 S / Innst. 423 S (Ap, H, Sp og SV sto bak tilrådingen om at forslaget ikke skulle vedtas). Handling: utfordre disse partiene via nåværende Næringskomité-kontakter. Skill historisk standpunkt (2024) fra dagens kontakt. Partienes begrunnelser fra 2024 legges ikke inn før kildekontroll. Sist kontrollert 23. september 2026.
+5. **Statsstøtte til selfangst** — `challenge_position`. Ønsket endring: fjerne statsstøtten. Flaskehals: manglende parlamentarisk støtte etter Dok. 8:152 S / Innst. 423 S (votering 19. juni 2024: 94–6 for innstillingen mot V/MDG-forslaget). Handling: partitilpassede spørsmål til Ap, H, Sp og SV via nåværende Næringskomité-kontakter — ikke én generisk e-postmal. Skill avstemning, partiinnlegg, statsrådens (regjeringens) argumentasjon, alternativt budsjett og partiprogram. Sp har nyere dokumentert retning i alternativt statsbudsjett 2026 (øke tilskuddet); H/SV/Ap dateres til 2024 der det er det nyeste. Dagens ordning: Fiskeridirektoratets side «Deltakelse i selfangst 2026» (ikke kopier åpenbare gamle årstall fra retningslinje-PDF). Sist kontrollert 23. september 2026.
 
 Ikke fremstill en utgått høring som åpen eller et forslag som vedtatt.
 
@@ -174,11 +176,13 @@ Primærkilder for grisesaken:
 Primærkilder for selfangstsaken:
 
 - [Dokument 8:152 S (2023–2024)](https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Representantforslag/2023-2024/dok8-202324-152s/)
-- [Innst. 423 S (2023–2024)](https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Innstillinger/Stortinget/2023-2024/inns-202324-423s/?all=true) (mindretall; komiteens tilråding)
-- [Voteringsoversikt sak 98552](https://www.stortinget.no/no/Saker-og-publikasjoner/Saker/Sak/Voteringsoversikt/?p=98552&dnid=1)
+- [Innst. 423 S (2023–2024)](https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Innstillinger/Stortinget/2023-2024/inns-202324-423s/?all=true) (mindretall; komiteens tilråding; departementets vurdering)
+- [Stortingsdebatten 19. juni 2024](https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Referater/Stortinget/2023-2024/refs-202324-06-19/?m=3)
+- [Voteringsoversikt sak 98552](https://www.stortinget.no/no/Saker-og-publikasjoner/Saker/Sak/Voteringsoversikt/?p=98552&dnid=1) (94–6)
 - [Stortingssak 98552](https://www.stortinget.no/no/Saker-og-publikasjoner/Saker/Sak/?p=98552)
-- [Fiskeridirektoratet — Deltakelse i selfangst 2026](https://www.fiskeridir.no/nyheter/deltakelse-i-selfangst-2026) (tilskudd inntil 1,5 mill. kr)
+- [Fiskeridirektoratet — Deltakelse i selfangst 2026](https://www.fiskeridir.no/nyheter/deltakelse-i-selfangst-2026) (hovedkilde for dagens ordning; ikke stol på årstall i retningslinje-PDF alene)
 - [Forskrift om regulering av fangst av sel i Vesterisen og Østisen i 2026](https://lovdata.no/dokument/SF/forskrift/2026-03-12-398) (§ 3 og § 5)
+- Senterpartiets alternative statsbudsjett 2026; Venstres alternative statsbudsjett 2025; MDGs arbeidsprogram 2025–2029
 
 Primærkilder for oppdrettsfisk:
 

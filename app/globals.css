@@ -746,8 +746,8 @@ footer p { margin: 0; }
   text-underline-offset: 3px;
 }
 .got-reply {
-  margin: 28px 0;
-  padding: 18px 0 18px 18px;
+  margin: 36px 0 0;
+  padding: 18px 0 0 18px;
   border-left: 2px solid var(--hairline);
 }
 .got-reply h3 {
@@ -762,11 +762,13 @@ footer p { margin: 0; }
 }
 .challenge-party-list {
   display: grid;
-  gap: 18px;
+  gap: 28px;
   margin-top: 20px;
 }
 .challenge-party {
-  padding: 18px 0 0;
+  display: grid;
+  gap: 18px;
+  padding: 22px 0 0;
   border-top: 1px solid var(--hairline);
 }
 .challenge-party:first-child {
@@ -774,30 +776,27 @@ footer p { margin: 0; }
   padding-top: 0;
 }
 .challenge-party-name {
-  margin: 0 0 6px;
-  font: 400 1.25rem/1.3 Georgia, "Times New Roman", serif;
+  margin: 0;
+  font: 400 1.35rem/1.3 Georgia, "Times New Roman", serif;
   letter-spacing: -.02em;
 }
-.challenge-party-stance {
+.challenge-section-label {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font: 600 .8125rem/1.4 Arial, Helvetica, sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.challenge-party > section > p {
   margin: 0 0 10px;
-  color: var(--muted);
-  font-size: .9375rem;
 }
-.challenge-party-details {
-  border: 0;
+.challenge-question {
   margin: 0;
+  max-width: 40rem;
+  font-size: 1.0625rem;
+  line-height: 1.55;
 }
-.challenge-party-details summary {
-  padding: 8px 0;
-  color: var(--coral);
-  font-size: .9375rem;
-}
-.challenge-party-body {
-  display: grid;
-  gap: 22px;
-  padding: 8px 0 12px;
-}
-.challenge-party-body .rep-name {
+.challenge-party .rep-name {
   margin: 0 0 4px;
   font: 600 1.05rem/1.35 Arial, Helvetica, sans-serif;
 }

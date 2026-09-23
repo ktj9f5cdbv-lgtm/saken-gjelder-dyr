@@ -100,7 +100,7 @@ export default function Home() {
                 <a href="/saker/selfangst">Statsstøtte til selfangst</a>
               </h2>
               <p>
-                Et forslag om å fjerne statsstøtten ble behandlet av Stortinget i 2024, men fikk ikke flertall. Du kan spørre partiene som sto bak tilrådingen om standpunktet fortsatt gjelder.
+                Et forslag om å fjerne statsstøtten ble behandlet av Stortinget i 2024, men fikk ikke flertall. Du kan spørre partiene som sto bak tilrådingen om standpunktet fortsatt gjelder — med spørsmål tilpasset hver parts begrunnelse.
               </p>
               <a className="coral-button" href="/saker/selfangst">
                 Se saken og utfordre et standpunkt <span aria-hidden="true">→</span>

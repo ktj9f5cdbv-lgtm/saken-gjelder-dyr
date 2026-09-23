@@ -28,8 +28,7 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `app/saker/oppdrettsfisk/page.tsx` | Oppdrettsfisk: innspill om fiskevelferd |
 | `app/saker/griser/page.tsx` | Grisesaken: Storting-spor, brevutkast, saksgang og kilder |
 | `app/saker/griser/letter.tsx` | Kopierbart politisk brevutkast |
-| `app/saker/selfangst/page.tsx` | Selfangstsaken: Storting-spor, stans statsstøtten |
-| `app/saker/selfangst/letter.tsx` | Kopierbart brevutkast om statsstøtte |
+| `app/saker/selfangst/page.tsx` | Selfangstsaken: Storting-spor, utfordre standpunkt |
 | `app/globals.css` | Felles stil og mobiltilpasning |
 | `app/layout.tsx` | Språk og sidemetadata |
 | `app/pavirk/page.tsx` | Slik kan du påvirke — fire handlingstyper |
@@ -46,7 +45,7 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `public/icons/` | SVG-kilder for prosessikonene |
 | `archive/` | Tidligere designforsøk og ChatGPT-eksport — **ikke** publiserte sider |
 
-Tre saksspor: **åpen høring** (høner/hester), **innspillsrunde** (oppdrettsfisk) og **Storting-handling** (griser / selfangst med ulike handlingstyper). Selfangst er første sak på `challenge_position`. Der leseren skal skrive selv: bruk `ActionExample`.
+Tre saksspor: **åpen høring** (høner/hester), **innspillsrunde** (oppdrettsfisk) og **Storting-handling** (griser / selfangst med ulike handlingstyper). Selfangst er første sak på `challenge_position` med partitilpassede spørsmål (ikke generisk e-postmal). Der leseren skal skrive selv i andre saker: bruk `ActionExample`.
 
 ## Avgrensning
 

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "../../site-parts";
-import Letter from "./letter";
 import { CaseProcessLabel } from "@/components/case-process-label";
 import { PoliticalHistory } from "@/components/political-history";
 import { ChallengePositionModule } from "@/components/challenge-position";
@@ -8,20 +7,23 @@ import {
   selfangstActionType,
   selfangstHistory,
   selfangstChallengeParties,
-  challengeExampleLetter,
   fiskeridir,
   forskrift,
   sak98552,
   dok8,
   innstilling,
+  debatt,
   votering,
+  spBudsjett2026,
+  venstreBudsjett2025,
+  mdgProgram,
 } from "@/content/cases/selfangst";
 import { ACTION_TYPE_LABELS } from "@/content/action-types";
 
 export const metadata: Metadata = {
   title: "Statsstøtte til selfangst | Saken gjelder dyr",
   description:
-    "Forslag om å fjerne statsstøtten ble behandlet i 2024 uten flertall. Du kan spørre partiene som sto bak tilrådingen om standpunktet fortsatt gjelder.",
+    "Forslag om å fjerne statsstøtten ble behandlet i 2024 uten flertall. Partiene som motsatte seg avvikling hadde ulike begrunnelser — du kan stille tilpassede spørsmål.",
 };
 
 export default function SealHuntCase() {
@@ -53,11 +55,22 @@ export default function SealHuntCase() {
               Fiskeridirektoratet
             </a>{" "}
             opplyser at det er avsatt totalt 1,5 millioner kroner i tilskudd til
-            rederier og mottak.
+            rederier og mottak. Målet er at fartøy- og mottakssiden skal kunne
+            skape størst mulig verdier basert på råstoff fra sel. Fartøy som
+            mottar tilskudd må gjennomføre minst 35 fangstdøgn.
           </p>
           <p>
             Norske fartøy med tillatelse kan i 2026 fange inntil 8&nbsp;935
             grønlandssel i Vesterisen. Diende unger er fredet.
+          </p>
+          <p className="source-note">
+            <a href={fiskeridir} target="_blank" rel="noopener noreferrer">
+              Fiskeridirektoratet — Deltakelse i selfangst 2026
+            </a>
+            <span>
+              Hovedkilde for dagens tilskuddsordning (publisert 13. februar
+              2026).
+            </span>
           </p>
           <p className="source-note">
             <a href={forskrift} target="_blank" rel="noopener noreferrer">
@@ -68,7 +81,7 @@ export default function SealHuntCase() {
           </p>
           <ul className="case-bullets case-facts">
             <li>
-              <strong>1,5 mill. kr</strong> i statsstøtte i 2026
+              <strong>Inntil 1,5 mill. kr</strong> i statsstøtte i 2026
             </li>
             <li>
               <strong>Inntil 8&nbsp;935</strong> grønlandssel
@@ -96,7 +109,37 @@ export default function SealHuntCase() {
             <a href={dok8} target="_blank" rel="noopener noreferrer">
               Dokument 8:152 S (2023–2024)
             </a>
-            <span>Forslagsdelen.</span>
+            <span>
+              Forslagsdelen. Fremmet av Alfred Jens Bjørlo og Ingvild Wetrhus
+              Thorsvik (Venstre). Samme ordlyd ble senere fremmet som
+              mindretallsforslag fra Venstre og MDG i Innst. 423 S.
+            </span>
+          </p>
+          <p>
+            Ved alternativ votering mellom dette forslaget og komiteens
+            innstilling ble innstillingen vedtatt med{" "}
+            <strong>94 mot 6 stemmer</strong>. Forslaget om å fjerne subsidiene
+            ble dermed ikke vedtatt. Tilskuddet eksisterer fortsatt.
+          </p>
+          <p className="source-note">
+            <a href={votering} target="_blank" rel="noopener noreferrer">
+              Voteringsoversikt — sak 98552
+            </a>
+            <span>
+              Alternativ votering 3a 19. juni 2024: 94 for innstillingen, 6 mot.
+            </span>
+          </p>
+          <p>
+            I behandlingen i 2024 viste næringskomiteen til departementets
+            vurdering om at interessen både for fangsten og selprodukter hadde
+            gått ned, og at tilskuddet de foregående årene hadde vært avgjørende
+            for at rederier valgte å dra på fangst.
+          </p>
+          <p className="source-note">
+            <a href={innstilling} target="_blank" rel="noopener noreferrer">
+              Innst. 423 S (2023–2024)
+            </a>
+            <span>Avsnittet «Komiteens merknader».</span>
           </p>
         </section>
 
@@ -106,18 +149,10 @@ export default function SealHuntCase() {
         />
 
         <ChallengePositionModule
-          intro="Forslaget om å fjerne støtten fikk ikke flertall. Du kan kontakte et av partiene som sto bak tilrådingen om at forslaget ikke skulle vedtas, og spørre om standpunktet fortsatt gjelder og hva begrunnelsen er."
+          intro="Forslaget om å fjerne støtten fikk ikke flertall. Partiene som sto bak tilrådingen hadde ulike begrunnelser — og noen har nyere dokumenterte posisjoner. Du kan kontakte et parti og stille et spørsmål som treffer akkurat det standpunktet."
           parties={selfangstChallengeParties}
-          exampleLetter={challengeExampleLetter}
           mailSubject="Statsstøtte til selfangst"
         />
-
-        <details className="expandable letter-expander" id="brev">
-          <summary>
-            Åpne redigerbart eksempel <span aria-hidden="true">+</span>
-          </summary>
-          <Letter />
-        </details>
 
         <p className="article-meta case-verified">
           Sist kontrollert: 23. september 2026. Handlingstype:{" "}
@@ -146,8 +181,19 @@ export default function SealHuntCase() {
                 Innst. 423 S (2023–2024) <span aria-hidden="true">↗</span>
               </a>
               <p>
-                Mindretallsforslag fra Venstre og MDG; komiteens tilråding
-                fremmet av Arbeiderpartiet, Høyre, Senterpartiet og SV.
+                Mindretallsforslag fra Venstre og MDG; komiteens tilråding;
+                departementets vurdering om fallende interesse gjengitt i
+                komiteens merknader.
+              </p>
+            </li>
+            <li>
+              <a href={debatt} target="_blank" rel="noopener noreferrer">
+                Stortingsdebatten 19. juni 2024{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Partiinnlegg (bl.a. Grotle, Nordlund, Fylkesnes) og statsrådens
+                innlegg på vegne av regjeringen.
               </p>
             </li>
             <li>
@@ -156,8 +202,8 @@ export default function SealHuntCase() {
                 <span aria-hidden="true">↗</span>
               </a>
               <p>
-                Behandlet 19. juni 2024. Forslaget ble ikke vedtatt; vedtak i
-                samsvar med innstillingen.
+                Alternativ votering 19. juni 2024: 94 for innstillingen, 6 mot
+                forslaget fra V og MDG.
               </p>
             </li>
             <li>
@@ -173,8 +219,8 @@ export default function SealHuntCase() {
                 <span aria-hidden="true">↗</span>
               </a>
               <p>
-                Dokumenterer tilskuddet på totalt 1,5 millioner kroner.
-                Publisert 13. februar 2026.
+                Hovedkilde for dagens ordning: 1,5 millioner kroner, formål og
+                krav om minst 35 fangstdøgn. Publisert 13. februar 2026.
               </p>
             </li>
             <li>
@@ -186,6 +232,34 @@ export default function SealHuntCase() {
                 § 3: inntil 8&nbsp;935 grønlandssel i Vesterisen. § 5: forbud
                 mot fangst av diende unger.
               </p>
+            </li>
+            <li>
+              <a href={spBudsjett2026} target="_blank" rel="noopener noreferrer">
+                Senterpartiets alternative statsbudsjett 2026{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Forslag om å styrke føringstilskuddet og øke tilskuddet til
+                selfangst.
+              </p>
+            </li>
+            <li>
+              <a
+                href={venstreBudsjett2025}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Venstres alternative statsbudsjett 2025{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>«Avvikle tilskudd til selfangst.»</p>
+            </li>
+            <li>
+              <a href={mdgProgram} target="_blank" rel="noopener noreferrer">
+                MDGs arbeidsprogram 2025–2029{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>Programfestet: fjerne subsidiene til selfangst.</p>
             </li>
           </ul>
         </section>

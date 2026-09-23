@@ -53,7 +53,7 @@ export const representatives: Record<string, Representative> = {
         url: "https://www.stortinget.no/no/Stottemeny/kontakt/representanter-og-partigrupper/Representantenes-e-postadresser/",
       },
     ],
-    verifiedAt: "2026-09-22",
+    verifiedAt: "2026-09-23",
   },
   "geir-jorgensen": {
     id: "geir-jorgensen",
@@ -77,7 +77,7 @@ export const representatives: Record<string, Representative> = {
         url: "https://www.stortinget.no/no/Stottemeny/kontakt/representanter-og-partigrupper/Representantenes-e-postadresser/",
       },
     ],
-    verifiedAt: "2026-09-22",
+    verifiedAt: "2026-09-23",
   },
   "rune-stostad": {
     id: "rune-stostad",
@@ -101,7 +101,7 @@ export const representatives: Record<string, Representative> = {
         url: "https://www.stortinget.no/no/Stottemeny/kontakt/representanter-og-partigrupper/Representantenes-e-postadresser/",
       },
     ],
-    verifiedAt: "2026-09-22",
+    verifiedAt: "2026-09-23",
   },
   "guri-melby": {
     id: "guri-melby",
