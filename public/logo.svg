@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 96" role="img" aria-label="Saken gjelder dyr">
+  <style>
+    .line {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: 400;
+      fill: #302e2b;
+    }
+    .dot { fill: #ad493a; }
+  </style>
+  <text class="line" x="0" y="36" font-size="28" letter-spacing="-0.04em">Saken gjelder</text>
+  <text class="line" x="0" y="82" font-size="40" letter-spacing="-0.045em">dyr<tspan class="dot">.</tspan></text>
+</svg>

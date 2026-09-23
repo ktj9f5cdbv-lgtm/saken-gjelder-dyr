@@ -25,17 +25,28 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `app/site-parts.tsx` | Navn, meny, saksvarsler, kontakt og bunntekst |
 | `app/saker/honer/page.tsx` | Hønesaken (åpen høring) |
 | `app/saker/hester/page.tsx` | Hestesaken (åpen høring) |
-| `app/saker/griser/page.tsx` | Grisesaken, brevutkast, saksgang og kilder |
+| `app/saker/oppdrettsfisk/page.tsx` | Oppdrettsfisk: innspill om fiskevelferd |
+| `app/saker/griser/page.tsx` | Grisesaken: Storting-spor, brevutkast, saksgang og kilder |
 | `app/saker/griser/letter.tsx` | Kopierbart politisk brevutkast |
-| `app/saker/selfangst/page.tsx` | Selfangstsaken: stans statsstøtten |
+| `app/saker/selfangst/page.tsx` | Selfangstsaken: Storting-spor, stans statsstøtten |
 | `app/saker/selfangst/letter.tsx` | Kopierbart brevutkast om statsstøtte |
 | `app/globals.css` | Felles stil og mobiltilpasning |
 | `app/layout.tsx` | Språk og sidemetadata |
+| `app/pavirk/page.tsx` | Slik kan du påvirke — fire handlingstyper |
 | `app/pavirk/stortingsrepresentant/page.tsx` | Veiledning: kontakt stortingsrepresentant |
+| `content/action-types.ts` | Handlingstyper (hearing, request_action, challenge_position, follow_up_decision) |
+| `content/cases/selfangst.ts` | Selfangst: challenge_position-data |
 | `content/representatives/` | Felles representantdata |
-| `content/case-contacts/` | Saksvise kontaktforslag |
+| `content/case-contacts/` | Saksvise kontaktforslag (eldre modell) |
+| `components/case-process-label.tsx` | Prosessikoner (høring / kontakt politiker) |
+| `components/action-example.tsx` | Eksempel på hva leseren kan skrive |
+| `components/challenge-position.tsx` | Handlingstype: utfordre et standpunkt |
+| `components/political-history.tsx` | Kompakt politisk historikk |
 | `components/case-contact-module.tsx` | Saksmodul for representantkontakt |
+| `public/icons/` | SVG-kilder for prosessikonene |
 | `archive/` | Tidligere designforsøk og ChatGPT-eksport — **ikke** publiserte sider |
+
+Tre saksspor: **åpen høring** (høner/hester), **innspillsrunde** (oppdrettsfisk) og **Storting-handling** (griser / selfangst med ulike handlingstyper). Selfangst er første sak på `challenge_position`. Der leseren skal skrive selv: bruk `ActionExample`.
 
 ## Avgrensning
 

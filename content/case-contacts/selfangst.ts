@@ -1,3 +1,7 @@
+/**
+ * @deprecated Erstattet av `content/cases/selfangst.ts` + ChallengePositionModule
+ * (handlingstype challenge_position). Beholdes midlertidig som referanse.
+ */
 import type { CaseContactContent } from "../representatives/types";
 
 const sak98552 =
@@ -24,7 +28,7 @@ const epostliste =
  */
 export const selfangstContact: CaseContactContent = {
   caseId: "selfangst",
-  purposeTitle: "Aktuelle kontaktforslag",
+  purposeTitle: "Kontakt en stortingsrepresentant",
   purposeBody: [
     "Be en representant arbeide for at statsstøtten til selfangst fjernes — for eksempel gjennom et nytt representantforslag eller spørsmål til statsråden.",
   ],
@@ -60,7 +64,7 @@ export const selfangstContact: CaseContactContent = {
       {
         label: "Stortingssaken om å fjerne subsidiene",
         url: sak98552,
-        note: "Forslaget ble ikke vedtatt.",
+        note: "Forslaget ble stemt ned.",
       },
     ],
     draftNote:
@@ -111,7 +115,7 @@ export const selfangstContact: CaseContactContent = {
         {
           label: "Stortingssaken om subsidiene til selfangst",
           url: sak98552,
-          note: "Forslaget ble ikke vedtatt.",
+          note: "Forslaget ble stemt ned.",
         },
         {
           label: "Stortingets biografi — leder av Venstres gruppe",

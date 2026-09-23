@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "../../site-parts";
+import { CaseProcessLabel } from "@/components/case-process-label";
+import { ActionExample } from "@/components/action-example";
+import { ACTION_TYPE_LABELS } from "@/content/action-types";
+import { caseActionTypes } from "@/content/cases/registry";
 
 export const metadata: Metadata = {
   title: "Utstyr til hest | Saken gjelder dyr",
@@ -17,9 +21,11 @@ export default function HorseCase() {
       <main className="page-width focused-case" id="innhold">
         <a className="back-link" href="/#saken">← Til forsiden</a>
         <header className="article-heading">
-          <p className="kicker">Hester · Høring</p>
+          <p className="kicker kicker-theme">Hester · Utstyr</p>
+          <CaseProcessLabel kind="hearing">
+            {ACTION_TYPE_LABELS[caseActionTypes.hester]} · Frist 1. oktober 2026
+          </CaseProcessLabel>
           <h1>Utstyr til hest – hva bør undersøkes?</h1>
-          <p className="case-status">Åpen høring · Frist 1. oktober 2026</p>
           <p className="article-deck">
             Mattilsynet ber om en faglig vurdering av hvordan utstyr påvirker hesters velferd. Du kan si din mening om hva vurderingen bør omfatte.
           </p>
@@ -40,18 +46,14 @@ export default function HorseCase() {
             Bestillingen omfatter blant annet bitt, bittløse hodelag, nesereimer, sporer, tungestropp og utstyr som begrenser hestens bevegelser. Også tilpasning og bruk skal vurderes.
           </p>
           <p>
-            <strong>Denne høringen gjelder hva som skal undersøkes. Det foreligger ikke et ferdig forslag til utstyrsforbud.</strong>
+            <strong>Denne høringen gjelder hva som skal undersøkes av VKM — ikke et ferdig forslag til hvilke typer utstyr som skal forbys.</strong>
+          </p>
+          <p>
+            Det som undersøkes nå, blir grunnlaget for senere regler. Vi mener vurderingen bør fange opp hestenes opplevelse — smerte, ubehag, frykt og begrenset bevegelse — både ved anbefalt bruk og ved feilbruk, også når skadene ikke synes utenpå.
           </p>
           <p className="source-note">
             <a href={hearingInfo} target="_blank" rel="noopener noreferrer">Mattilsynets høringsside</a>
             <span>Innledningen og listen over utstyr.</span>
-          </p>
-        </section>
-
-        <section className="case-block" aria-labelledby="for-hestene">
-          <h2 id="for-hestene">Hva betyr det for hestene?</h2>
-          <p>
-            Det som undersøkes nå, blir grunnlaget for senere regler. Vi mener vurderingen bør fange opp hestenes opplevelse — smerte, ubehag, frykt og begrenset bevegelse — både ved anbefalt bruk og ved feilbruk, også når skadene ikke synes utenpå.
           </p>
         </section>
 
@@ -104,9 +106,18 @@ export default function HorseCase() {
           <p>
             Du kan sende inn som privatperson. Høringsuttalelser publiseres på høringssiden; skriv med tanke på at andre kan lese teksten din.
           </p>
+          <ActionExample
+            title="Et eksempel på høringsinnspill"
+            premise="Hvis du mener kunnskapsvurderingen bør omfatte flere typer utstyr eller brukssituasjoner, kan du for eksempel skrive:"
+            example="Jeg ber om at VKM også vurderer utstyr og bruksmåter som kan påføre hesten smerte, frykt eller betydelig ubehag selv om de ikke er uttrykkelig nevnt i listen. Vurderingen bør omfatte både selve utstyret og hvordan styrke, varighet og gjentatt bruk påvirker risikoen for redusert velferd."
+          />
           <a className="coral-button" href={hearingSubmit} target="_blank" rel="noopener noreferrer">
             Gå til høringstjenesten <span aria-hidden="true">↗</span>
           </a>
+          <p className="action-context">
+            Dette er en høringsuttalelse til Mattilsynet, ikke en henvendelse til Stortinget. Trenger du hjelp til å kontakte en politiker i andre saker, se{" "}
+            <a href="/pavirk/stortingsrepresentant">veiledningen om stortingsrepresentanter</a>.
+          </p>
           <div className="help-box">
             <h3>Hjelp til å komme i gang</h3>
             <p>

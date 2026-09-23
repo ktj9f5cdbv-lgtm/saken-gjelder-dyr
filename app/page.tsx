@@ -1,4 +1,7 @@
 import { Header, Footer, Newsletter, Contact } from "./site-parts";
+import { CaseProcessLabel } from "@/components/case-process-label";
+import { ACTION_TYPE_LABELS } from "@/content/action-types";
+import { caseActionTypes } from "@/content/cases/registry";
 
 export default function Home() {
   return (
@@ -8,7 +11,7 @@ export default function Home() {
         <section className="editorial-intro" aria-labelledby="intro-title">
           <h1 id="intro-title">Finn ut når og hvordan du kan påvirke</h1>
           <p className="intro-text">
-            Politiske beslutninger former dyrs hverdag. Her får du aktuelle saker, frister og en enkel vei til å sende høringsuttalelse eller kontakte en politiker — med kilder du kan sjekke selv.
+            Politiske beslutninger former dyrs hverdag. Her får du aktuelle saker, frister og en enkel vei til å sende høringsuttalelse, innspill eller kontakte en politiker — med kilder du kan sjekke selv.
           </p>
         </section>
 
@@ -17,7 +20,10 @@ export default function Home() {
 
           <article className="featured-story text-only" aria-labelledby="honer-title">
             <div className="featured-copy">
-              <p className="kicker">Åpen høring · Frist 1. oktober 2026</p>
+              <p className="kicker kicker-theme">Høner · Burhold</p>
+              <CaseProcessLabel kind="hearing">
+                {ACTION_TYPE_LABELS[caseActionTypes.honer]} · Frist 1. oktober 2026
+              </CaseProcessLabel>
               <h2 id="honer-title">
                 <a href="/saker/honer">Høner ut av bur – når skal forbudet gjelde?</a>
               </h2>
@@ -32,7 +38,10 @@ export default function Home() {
 
           <article className="featured-story text-only secondary-case" aria-labelledby="hester-title">
             <div className="featured-copy">
-              <p className="kicker">Åpen høring · Frist 1. oktober 2026</p>
+              <p className="kicker kicker-theme">Hester · Utstyr</p>
+              <CaseProcessLabel kind="hearing">
+                {ACTION_TYPE_LABELS[caseActionTypes.hester]} · Frist 1. oktober 2026
+              </CaseProcessLabel>
               <h2 id="hester-title">
                 <a href="/saker/hester">Utstyr til hest – hva bør undersøkes?</a>
               </h2>
@@ -45,39 +54,63 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="featured-story text-only secondary-case" aria-labelledby="griser-title">
+          <article className="featured-story text-only secondary-case" aria-labelledby="oppdrett-title">
             <div className="featured-copy">
-              <p className="kicker">Saken vi følger</p>
-              <h2 id="griser-title">
-                <a href="/saker/griser">Bedre regler for griser: Etterspør status og tidsplan</a>
+              <p className="kicker kicker-theme">Oppdrettsfisk · Fiskevelferd</p>
+              <CaseProcessLabel kind="hearing">
+                {ACTION_TYPE_LABELS[caseActionTypes.oppdrettsfisk]} · Frist 31. oktober 2027
+              </CaseProcessLabel>
+              <h2 id="oppdrett-title">
+                <a href="/saker/oppdrettsfisk">Gi innspill om fiskevelferd i oppdrett</a>
               </h2>
               <p>
-                Stortinget har bedt regjeringen endre reglene for grisers plass, underlag og miljøberikelse. Her finner du bakgrunnen og hjelp til å be om oppdatert status og en konkret tidsplan.
+                Regjeringen arbeider med hvordan oppdrettsnæringen skal reguleres framover. Nærings- og fiskeridepartementet tar imot skriftlige innspill, og alle kan sende inn. Et sentralt spørsmål er hvordan reguleringen kan bidra til lavere dødelighet og bedre fiskevelferd.
+              </p>
+              <a className="coral-button" href="/saker/oppdrettsfisk">
+                Se saken og send innspill <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article className="featured-story text-only secondary-case" aria-labelledby="griser-title">
+            <div className="featured-copy">
+              <p className="kicker kicker-theme">Griser · Regelverk</p>
+              <CaseProcessLabel kind="politician">
+                {ACTION_TYPE_LABELS[caseActionTypes.griser]}
+              </CaseProcessLabel>
+              <h2 id="griser-title">
+                <a href="/saker/griser">Bedre regler for griser</a>
+              </h2>
+              <p>
+                Stortinget har vedtatt at regelverket for grisers plass, underlag og miljøberikelse skal endres. Oppfølgingen er uavklart — du kan be om status og tidsplan.
               </p>
               <a className="coral-button" href="/saker/griser">
-                Se saken og hva du kan gjøre <span aria-hidden="true">→</span>
+                Se saken og be om oppfølging <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
           <article className="featured-story text-only secondary-case" aria-labelledby="selfangst-title">
             <div className="featured-copy">
-              <p className="kicker">Selfangst · Statsstøtte</p>
+              <p className="kicker kicker-theme">Selfangst · Statsstøtte</p>
+              <CaseProcessLabel kind="politician">
+                {ACTION_TYPE_LABELS[caseActionTypes.selfangst]}
+              </CaseProcessLabel>
               <h2 id="selfangst-title">
-                <a href="/saker/selfangst">Stans statsstøtten til selfangst</a>
+                <a href="/saker/selfangst">Statsstøtte til selfangst</a>
               </h2>
               <p>
-                I 2026 er det satt av 1,5 millioner kroner i tilskudd til kommersiell selfangst. Stortinget vedtok ikke et forslag om å fjerne støtten i 2024. Du kan be en representant ta saken opp på nytt.
+                Et forslag om å fjerne statsstøtten ble behandlet av Stortinget i 2024, men fikk ikke flertall. Du kan spørre partiene som sto bak tilrådingen om standpunktet fortsatt gjelder.
               </p>
               <a className="coral-button" href="/saker/selfangst">
-                Se saken og kontakt en representant <span aria-hidden="true">→</span>
+                Se saken og utfordre et standpunkt <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
         </section>
 
         <section className="site-motivation" id="om-siden" aria-labelledby="motivation-title">
-          <h2 id="motivation-title">Hvorfor Saken gjelder dyr?</h2>
+          <h2 id="motivation-title">Motivasjonen bak nettstedet</h2>
           <div>
             <p>
               Målet er å bidra til at dyr får bedre liv. Det skal være lettere å finne fram til beslutningene som berører dem – og mulighetene til å påvirke.

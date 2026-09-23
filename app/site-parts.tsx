@@ -9,13 +9,17 @@ export function Header() {
       <a className="skip-link" href="#innhold">Hopp til innhold</a>
       <header className="editorial-header page-width">
         <a className="editorial-mark" href="/" aria-label="Saken gjelder dyr – forsiden">
-          <span>Saken gjelder</span>
-          <span>dyr<span className="coral-dot">.</span></span>
+          <span>
+            Saken g<span className="mark-gj">j</span>elder
+          </span>
+          <span>
+            dyr<span className="coral-dot">.</span>
+          </span>
         </a>
         <nav aria-label="Hovedmeny">
           <a href="/#saken">Saker</a>
-          <a href="/pavirk/stortingsrepresentant">Påvirk</a>
-          <a href="/#om-siden">Hvorfor?</a>
+          <a href="/pavirk">Påvirk</a>
+          <a href="/#om-siden">Om siden</a>
           <a href="/#saksvarsler">Saksvarsler</a>
           <a href="/#kontakt">Kontakt</a>
         </nav>
@@ -32,7 +36,7 @@ export function Newsletter() {
       <h2 id="saksvarsler-title">Få beskjed når du kan påvirke</h2>
       <div>
         <p>
-          Saksvarsler på e-post om nye høringer som angår dyr, viktige frister og utviklingen i sakene vi følger — med forklaring på hva du kan gjøre.
+          Saksvarsler på e-post om nye høringer og politiske saker som angår dyr, viktige frister og utviklingen i sakene vi følger — med forklaring på hva du kan gjøre.
         </p>
         <a
           className="coral-button"
@@ -74,9 +78,13 @@ export function Contact() {
 export function Footer() {
   return (
     <footer className="editorial-footer page-width">
-      <a className="editorial-mark" href="/">
-        <span>Saken gjelder</span>
-        <span>dyr<span className="coral-dot">.</span></span>
+      <a className="editorial-mark" href="/" aria-label="Saken gjelder dyr – forsiden">
+        <span>
+          Saken g<span className="mark-gj">j</span>elder
+        </span>
+        <span>
+          dyr<span className="coral-dot">.</span>
+        </span>
       </a>
       <p>Det er de som må leve med vedtaket.</p>
       <small>

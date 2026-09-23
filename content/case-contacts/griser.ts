@@ -15,11 +15,12 @@ const guide =
  */
 export const griserContact: CaseContactContent = {
   caseId: "griser",
-  purposeTitle: "Kontakt en stortingsrepresentant",
+  purposeTitle: "Velg hvem du vil kontakte",
   purposeBody: [
-    "Du kan be en stortingsrepresentant følge opp gjennomføringen av vedtak 563: hva som er gjort, hva som gjenstår, og når nye krav til areal, mykt underlag og miljøberikelse kan komme.",
-    "En henvendelse kan bidra til at saken tas opp igjen overfor statsråden — for eksempel gjennom et skriftlig spørsmål. Det sikrer ikke et bestemt utfall, men kan gjøre status og tidsplan mer synlig.",
+    "Begrunnelsene nedenfor bygger på offentlige kilder: komitéverv og dokumentert arbeid med vedtak 563. Komitérolle alene dokumenterer ikke støtte til kravene.",
   ],
+  representativesLead:
+    "Noen er aktuelle fordi de har fulgt opp saken offentlig. Andre fordi de sitter i en relevant maktposisjon.",
   writingHelp: {
     title: "Hjelp til å skrive",
     bullets: [
@@ -45,7 +46,7 @@ export const griserContact: CaseContactContent = {
       },
     ],
     draftNote:
-      "Brevutkastet lenger opp på siden kan tilpasses og sendes. Skriv bare det du selv står inne for.",
+      "Brevutkastet nedenfor kan tilpasses og sendes. Skriv bare det du selv står inne for.",
   },
   representatives: [
     {

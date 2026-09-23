@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="13" fill="#faf8f3"/>
-  <path d="M17 14h16c10 0 17 7 17 18s-7 18-17 18H17V14Zm10 9v18h6c5 0 8-3 8-9s-3-9-8-9h-6Z" fill="#302e2b"/>
-  <rect x="44" y="43" width="8" height="8" rx="2" fill="#ad493a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Saken gjelder dyr">
+  <rect width="64" height="64" rx="12" fill="#faf8f3"/>
+  <!-- D for «dyr.» — samme vekt som ordmerket -->
+  <path
+    fill="#302e2b"
+    d="M16 13h15.2c11.1 0 18.3 6.9 18.3 19s-7.2 19-18.3 19H16V13zm11.2 9.4v19.2h4.2c5.6 0 8.9-3.4 8.9-9.6s-3.3-9.6-8.9-9.6h-4.2z"
+  />
+  <!-- Korallpunktum: samme tegn som i «dyr.» -->
+  <circle cx="51" cy="48" r="4.2" fill="#ad493a"/>
 </svg>

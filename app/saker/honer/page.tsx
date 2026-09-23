@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "../../site-parts";
+import { CaseProcessLabel } from "@/components/case-process-label";
+import { ActionExample } from "@/components/action-example";
+import { ACTION_TYPE_LABELS } from "@/content/action-types";
+import { caseActionTypes } from "@/content/cases/registry";
 
 export const metadata: Metadata = {
   title: "Høner ut av bur | Saken gjelder dyr",
@@ -16,9 +20,11 @@ export default function HenCase() {
       <main className="page-width focused-case" id="innhold">
         <a className="back-link" href="/#saken">← Til forsiden</a>
         <header className="article-heading">
-          <p className="kicker">Høner · Høring</p>
+          <p className="kicker kicker-theme">Høner · Burhold</p>
+          <CaseProcessLabel kind="hearing">
+            {ACTION_TYPE_LABELS[caseActionTypes.honer]} · Frist 1. oktober 2026
+          </CaseProcessLabel>
           <h1>Høner ut av bur – når skal forbudet gjelde?</h1>
-          <p className="case-status">Åpen høring · Frist 1. oktober 2026</p>
           <p className="article-deck">
             Mattilsynet foreslår å forby burhold av verpehøns fra 1. januar 2030. Du kan støtte forbudet og si din mening om hvor raskt det bør gjennomføres.
           </p>
@@ -103,9 +109,18 @@ export default function HenCase() {
           <p>
             Du kan sende inn som privatperson. Mattilsynet publiserer høringsuttalelser på høringssiden; skriv med tanke på at andre kan lese innspillet ditt.
           </p>
+          <ActionExample
+            title="Et eksempel på høringsinnspill"
+            premise="Hvis du støtter et forbud mot innredede bur, men mener overgangen bør skje tidligere, kan du for eksempel skrive:"
+            example="Jeg støtter forslaget om å forby hold av verpehøns i innredede bur. Jeg mener samtidig at det bør vurderes om forbudet kan tre i kraft tidligere enn 1. januar 2030, slik at færre høner holdes i bur i overgangsperioden."
+          />
           <a className="coral-button" href={hearingSubmit} target="_blank" rel="noopener noreferrer">
             Gå til høringstjenesten <span aria-hidden="true">↗</span>
           </a>
+          <p className="action-context">
+            Dette er en høringsuttalelse til Mattilsynet, ikke en henvendelse til Stortinget. Trenger du hjelp til å kontakte en politiker i andre saker, se{" "}
+            <a href="/pavirk/stortingsrepresentant">veiledningen om stortingsrepresentanter</a>.
+          </p>
           <div className="help-box">
             <h3>Hjelp til å komme i gang</h3>
             <p>

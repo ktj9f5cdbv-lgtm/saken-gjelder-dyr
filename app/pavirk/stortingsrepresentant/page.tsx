@@ -25,8 +25,8 @@ export default function ContactRepresentativeGuide() {
     <div className="editorial focused">
       <Header />
       <main className="page-width focused-case" id="innhold">
-        <a className="back-link" href="/#saken">
-          ← Til forsiden
+        <a className="back-link" href="/pavirk">
+          ← Slik kan du påvirke
         </a>
         <header className="article-heading">
           <p className="kicker">Slik kan du påvirke</p>
@@ -122,10 +122,10 @@ export default function ContactRepresentativeGuide() {
         <section className="case-block next-action" aria-labelledby="saker-lenker">
           <h2 id="saker-lenker">Saker med konkrete forslag</h2>
           <p>
-            <a href="/saker/griser">Bedre regler for griser</a> — representanter med begrunnelse og e-post.
+            <a href="/saker/griser">Bedre regler for griser</a> — be om oppfølging av vedtak 563.
           </p>
           <p>
-            <a href="/saker/selfangst">Stans statsstøtten til selfangst</a> — be om at subsidiene fjernes.
+            <a href="/saker/selfangst">Statsstøtte til selfangst</a> — utfordre partier som sto bak tilrådingen om at forslaget ikke skulle vedtas i 2024.
           </p>
           <p>
             For åpne høringer er det mer direkte å sende{" "}

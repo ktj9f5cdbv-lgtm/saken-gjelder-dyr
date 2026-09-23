@@ -128,6 +128,54 @@ export const representatives: Record<string, Representative> = {
     ],
     verifiedAt: "2026-09-22",
   },
+  "erlend-larsen": {
+    id: "erlend-larsen",
+    name: "Erlend Larsen",
+    party: "Høyre",
+    roles: [
+      "Stortingsrepresentant for Vestfold",
+      "Medlem av Næringskomiteen",
+    ],
+    email: "erlend.larsen@stortinget.no",
+    profileUrl:
+      "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=ERLL",
+    profileSources: [
+      {
+        label: "Stortingets biografi for Erlend Larsen",
+        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=ERLL",
+        note: "Roller og periode 2025–2029.",
+      },
+      {
+        label: "Representantenes e-postadresser",
+        url: "https://www.stortinget.no/no/Stottemeny/kontakt/representanter-og-partigrupper/Representantenes-e-postadresser/",
+      },
+    ],
+    verifiedAt: "2026-09-23",
+  },
+  "geir-pollestad": {
+    id: "geir-pollestad",
+    name: "Geir Pollestad",
+    party: "Senterpartiet",
+    roles: [
+      "Stortingsrepresentant for Rogaland",
+      "Medlem av Næringskomiteen",
+    ],
+    email: "geir.pollestad@stortinget.no",
+    profileUrl:
+      "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=GP",
+    profileSources: [
+      {
+        label: "Stortingets biografi for Geir Pollestad",
+        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=GP",
+        note: "Roller og periode 2025–2029.",
+      },
+      {
+        label: "Representantenes e-postadresser",
+        url: "https://www.stortinget.no/no/Stottemeny/kontakt/representanter-og-partigrupper/Representantenes-e-postadresser/",
+      },
+    ],
+    verifiedAt: "2026-09-23",
+  },
 };
 
 export function getRepresentative(id: string): Representative | undefined {
