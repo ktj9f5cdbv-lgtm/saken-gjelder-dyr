@@ -1,9 +1,11 @@
 /**
  * Handlingstype: utfordre et standpunkt.
- * Partitilpassede spørsmål — ikke generisk e-postmal eller «Kopier»-knapp på spørsmål.
+ * Premiss og spørsmål skilles. Kontakt er dynamisk metadata.
+ * Ingen generisk e-postmal eller «Kopier» på spørsmål.
  */
 import { getRepresentative } from "@/content/representatives";
 import type { ChallengeParty } from "@/content/cases/types";
+import type { SourceRef } from "@/content/representatives/types";
 import { CopyEmailButton } from "./copy-email-button";
 
 type Props = {
@@ -38,8 +40,8 @@ export function ChallengePositionModule({
       <p className="case-contact-lead">
         Partiene nedenfor sto bak tilrådingen om at forslaget ikke skulle
         vedtas i 2024. Begrunnelsene var forskjellige, og noen har nyere
-        dokumenterte posisjoner. Kontaktpersonene er nåværende representanter i
-        Næringskomiteen.
+        dokumenterte posisjoner. Kontaktpersonene er valgt ut fra saksansvar
+        eller relevant komitérolle i dag.
       </p>
 
       <div className="challenge-party-list">
@@ -73,7 +75,7 @@ function ChallengePartyCard({
   party: ChallengeParty;
   mailSubject: string;
 }) {
-  const rep = getRepresentative(party.representativeId);
+  const rep = getRepresentative(party.contact.representativeId);
   if (!rep) return null;
 
   const subject = encodeURIComponent(mailSubject);
@@ -86,37 +88,15 @@ function ChallengePartyCard({
         {party.partyName}
       </h3>
 
-      <section aria-labelledby={`${detailsId}-pos`}>
-        <h4 id={`${detailsId}-pos`} className="challenge-section-label">
-          {party.positionHeading}
+      <section aria-labelledby={`${detailsId}-focus`}>
+        <h4 id={`${detailsId}-focus`} className="challenge-section-label">
+          {party.focusHeading}
         </h4>
-        <p>{party.documentedPosition}</p>
-        <SourceList sources={party.positionSources} />
+        {party.focusParagraphs.map((paragraph) => (
+          <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+        ))}
+        <SourceList sources={party.focusSources} />
       </section>
-
-      {party.reasoning ? (
-        <section aria-labelledby={`${detailsId}-reason`}>
-          <h4 id={`${detailsId}-reason`} className="challenge-section-label">
-            {party.reasoningHeading ?? "Begrunnelse"}
-          </h4>
-          <p>{party.reasoning}</p>
-          {party.reasoningSources ? (
-            <SourceList sources={party.reasoningSources} />
-          ) : null}
-        </section>
-      ) : null}
-
-      {party.newerDevelopment ? (
-        <section aria-labelledby={`${detailsId}-dev`}>
-          <h4 id={`${detailsId}-dev`} className="challenge-section-label">
-            Utvikling siden
-          </h4>
-          <p>{party.newerDevelopment}</p>
-          {party.newerDevelopmentSources ? (
-            <SourceList sources={party.newerDevelopmentSources} />
-          ) : null}
-        </section>
-      ) : null}
 
       <section aria-labelledby={`${detailsId}-q`}>
         <h4 id={`${detailsId}-q`} className="challenge-section-label">
@@ -141,8 +121,8 @@ function ChallengePartyCard({
             </>
           ) : null}
         </p>
-        <p>{party.whyContactNow}</p>
-        <SourceList sources={party.contactSources} />
+        <p className="challenge-why-contact">{party.contact.whyRelevant}</p>
+        <SourceList sources={party.contact.sources} />
         <div className="rep-card-actions">
           <p>
             <a className="coral-button" href={mailto}>
@@ -164,15 +144,15 @@ function ChallengePartyCard({
           </p>
         </div>
         <p className="article-meta">
-          Kontaktopplysninger kontrollert: {formatDate(rep.verifiedAt)}.
-          Innhold kontrollert: {formatDate(party.reasonVerifiedAt)}.
+          Kontakt kontrollert: {formatDate(party.contact.verifiedAt)}. Innhold
+          kontrollert: {formatDate(party.contentVerifiedAt)}.
         </p>
       </section>
     </article>
   );
 }
 
-function SourceList({ sources }: { sources: ChallengeParty["positionSources"] }) {
+function SourceList({ sources }: { sources: SourceRef[] }) {
   if (sources.length === 0) return null;
   return (
     <ul className="rep-sources">

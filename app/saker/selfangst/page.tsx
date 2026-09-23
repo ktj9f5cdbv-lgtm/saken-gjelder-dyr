@@ -7,6 +7,7 @@ import {
   selfangstActionType,
   selfangstHistory,
   selfangstChallengeParties,
+  selfangstGovernmentReasoning,
   fiskeridir,
   forskrift,
   sak98552,
@@ -140,6 +141,20 @@ export default function SealHuntCase() {
               Innst. 423 S (2023–2024)
             </a>
             <span>Avsnittet «Komiteens merknader».</span>
+          </p>
+          <h3 className="challenge-section-label">
+            {selfangstGovernmentReasoning.heading}
+          </h3>
+          <p>{selfangstGovernmentReasoning.body}</p>
+          <p className="source-note">
+            <a
+              href={selfangstGovernmentReasoning.sources[0].url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {selfangstGovernmentReasoning.sources[0].label}
+            </a>
+            <span>{selfangstGovernmentReasoning.sources[0].note}</span>
           </p>
         </section>
 

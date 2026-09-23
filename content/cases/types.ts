@@ -9,25 +9,32 @@ export type HistoryStep = {
 };
 
 /**
- * Parti/aktør i handlingstypen challenge_position.
- * Felt er valgfrie der kildesituasjonen varierer mellom saker og partier.
+ * Nåværende kontakt — dynamisk metadata, atskilt fra historisk dokumentasjon.
+ * Oppdateres når saksansvar, komité eller personer endres.
+ */
+export type ChallengeContact = {
+  representativeId: string;
+  /** «Hvorfor akkurat denne personen?» — ikke sterkere enn dokumentert. */
+  whyRelevant: string;
+  sources: SourceRef[];
+  verifiedAt: string;
+};
+
+/**
+ * Parti i handlingstypen challenge_position.
+ * Partikortet skal forklare det som er spesielt for dette partiet —
+ * ikke gjenta hele sakens felles historikk.
  */
 export type ChallengeParty = {
   id: string;
   partyName: string;
-  /** F.eks. «Senterpartiet i 2026» eller «Dokumentert standpunkt» */
-  positionHeading: string;
-  documentedPosition: string;
-  positionSources: SourceRef[];
-  /** F.eks. «Høyres begrunnelse i 2024» / «Regjeringens begrunnelse i 2024» */
-  reasoningHeading?: string;
-  reasoning?: string;
-  reasoningSources?: SourceRef[];
-  newerDevelopment?: string;
-  newerDevelopmentSources?: SourceRef[];
+  /** F.eks. «Høyres begrunnelse i 2024» / «Senterpartiet i 2026» */
+  focusHeading: string;
+  /** Kort bakgrunn / premiss — skilles visuelt fra spørsmålet */
+  focusParagraphs: string[];
+  focusSources: SourceRef[];
+  /** Kort spørsmål som tåler faktisk utsendelse */
   suggestedQuestion: string;
-  representativeId: string;
-  whyContactNow: string;
-  contactSources: SourceRef[];
-  reasonVerifiedAt: string;
+  contact: ChallengeContact;
+  contentVerifiedAt: string;
 };

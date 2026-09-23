@@ -47,6 +47,21 @@ const innstillingDept: SourceRef = {
     "Avsnittet «Komiteens merknader»: komiteen viser til departementets vurdering om nedadgående interesse for fangsten og selprodukter, og at tilskuddet hadde vært avgjørende for at rederier valgte å dra på fangst.",
 };
 
+/** Regjeringens argumentasjon i debatten — ikke det samme som Ap-partiets posisjon. */
+export const selfangstGovernmentReasoning = {
+  heading: "Regjeringens begrunnelse i 2024",
+  body: "Fiskeri- og havminister Marianne Sivertsen Næss (Ap) uttalte seg på vegne av regjeringen. Regjeringen la blant annet vekt på utnyttelse av kvotene, verdiskaping fra selprodukter, tradisjonell kunnskap og å opprettholde næringen mens markedet for selprodukter ble utviklet.",
+  sources: [
+    {
+      label:
+        "Stortingsdebatten 19. juni 2024 — statsråd Marianne Sivertsen Næss",
+      url: debatt,
+      note:
+        "Hovedinnlegg på vegne av regjeringen — ikke et separat Ap-partiinnlegg.",
+    },
+  ] satisfies SourceRef[],
+};
+
 export const selfangstHistory: HistoryStep[] = [
   {
     dateLabel: "April 2024",
@@ -126,104 +141,92 @@ export const selfangstHistory: HistoryStep[] = [
 ];
 
 /**
- * Partier som sto bak komiteens tilråding om at forslaget ikke skulle vedtas.
- * Venstre og MDG hører hjemme i historikken (støttet avvikling), ikke her.
- * Kontaktpersoner: nåværende Næringskomité (periode 2025–2029).
+ * Partier som sto bak komiteens tilråding (ikke Venstre/MDG).
+ * Partikort = det som er spesielt for partiet + kort spørsmål + nåværende kontakt.
+ * Kontakt er dynamisk metadata — ikke del av den historiske dokumentasjonen.
  */
 export const selfangstChallengeParties: ChallengeParty[] = [
   {
     id: "h",
     partyName: "Høyre",
-    positionHeading: "Dokumentert standpunkt i 2024",
-    documentedPosition:
-      "Sto bak komiteens tilråding om at representantforslaget ikke skulle vedtas. Vi har ikke funnet et nyere offentlig Høyre-standpunkt som klart erstatter dokumentasjonen fra 2024.",
-    positionSources: [innstillingStance],
-    reasoningHeading: "Høyres begrunnelse i 2024",
-    reasoning:
-      "Høyre viste til at regjeringen skulle vurdere om tilskuddet burde videreføres, og ønsket å avvente denne vurderingen. Høyre påpekte samtidig at tilskuddet trolig ikke hadde skapt økt lønnsomhet i næringen over tid.",
-    reasoningSources: [
+    focusHeading: "Høyres begrunnelse i 2024",
+    focusParagraphs: [
+      "Høyre ønsket i 2024 å avvente regjeringens vurdering av om tilskuddet til selfangst burde videreføres. Tilskuddet ble senere videreført og eksisterer fortsatt i 2026.",
+    ],
+    focusSources: [
       {
         label: "Stortingsdebatten 19. juni 2024 — Olve Grotle (H)",
         url: debatt,
         note:
-          "Hovedinnlegg: fallende interesse og at tilskuddene trolig ikke kan sies å ha skapt økt lønnsomhet; avvente statsrådens vurdering.",
+          "Hovedinnlegg: avvente statsrådens vurdering; tilskuddene trolig ikke skapt økt lønnsomhet over tid.",
       },
-    ],
-    newerDevelopment:
-      "Tilskuddet ble senere videreført og eksisterer fortsatt i 2026, med inntil 1,5 millioner kroner ifølge Fiskeridirektoratet.",
-    newerDevelopmentSources: [
       {
         label: "Fiskeridirektoratet — Deltakelse i selfangst 2026",
         url: fiskeridir,
-        note: "Totalt 1,5 millioner kroner avsatt.",
+        note: "Dokumenterer at tilskuddet fortsatt finnes.",
       },
     ],
     suggestedQuestion:
-      "Høyre ønsket i 2024 å avvente regjeringens vurdering av tilskuddet til selfangst. Tilskuddet ble videreført og eksisterer fortsatt i 2026. Mener Høyre i dag at staten fortsatt bør subsidiere selfangsten? Hvis ja, hva er begrunnelsen?",
-    representativeId: "erlend-larsen",
-    whyContactNow:
-      "Medlem av Næringskomiteen i inneværende periode. Relevant som nåværende kontaktpunkt for Høyre i den komiteen som behandlet saken i 2024 — ikke som personlig stemmegiver i den gamle voteringen.",
-    contactSources: [
-      {
-        label: "Stortingets biografi — Erlend Larsen",
-        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=ERLL",
-        note: "Medlem av Næringskomiteen, periode 2025–2029.",
-      },
-      naringskomiteen,
-    ],
-    reasonVerifiedAt: "2026-09-23",
+      "Mener Høyre i dag at staten fortsatt bør subsidiere selfangsten? Hvis ja, hva er begrunnelsen?",
+    contact: {
+      representativeId: "bard-ludvig-thorheim",
+      whyRelevant:
+        "Medlem av Næringskomiteen og ansvarlig for dette saksfeltet for Høyre.",
+      sources: [
+        {
+          label: "Stortingets biografi — Bård Ludvig Thorheim",
+          url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=BRDTHO",
+          note: "Medlem av Næringskomiteen, periode 2025–2029.",
+        },
+        naringskomiteen,
+      ],
+      verifiedAt: "2026-09-23",
+    },
+    contentVerifiedAt: "2026-09-23",
   },
   {
     id: "sp",
     partyName: "Senterpartiet",
-    positionHeading: "Senterpartiet i 2026",
-    documentedPosition:
-      "Senterpartiet foreslo i sitt alternative statsbudsjett for 2026 å øke tilskuddet til selfangst («Styrkje føringstilskotet og auke tilskotet til selfangst»). Dette er nyere enn stortingsbehandlingen i 2024.",
-    positionSources: [
+    focusHeading: "Dokumentert bakgrunn",
+    focusParagraphs: [
+      "I behandlingen i 2024 opplyste departementet at interessen både for selfangsten og selprodukter hadde gått ned, og at tilskuddet hadde vært avgjørende for at rederier valgte å dra på fangst.",
+      "Senterpartiet foreslo i sitt alternative statsbudsjett for 2026 å øke tilskuddet til selfangst.",
+    ],
+    focusSources: [
+      innstillingDept,
       {
         label: "Senterpartiets alternative statsbudsjett 2026",
         url: spBudsjett2026,
         note:
-          "Tabell under fiskeri: «Styrkje føringstilskotet og auke tilskotet til selfangst» (5 mill. kr).",
-      },
-    ],
-    reasoningHeading: "Begrunnelse i 2024",
-    reasoning:
-      "I stortingsdebatten i 2024 la Willfred Nordlund (Sp) blant annet vekt på mattradisjoner, bærekraftig bestandsforvaltning, samlet ressursforvaltning og fangst som del av forvaltningen av grønlandssel.",
-    reasoningSources: [
-      {
-        label: "Stortingsdebatten 19. juni 2024 — Willfred Nordlund (Sp)",
-        url: debatt,
-        note:
-          "Hovedinnlegg: mattradisjoner, bærekraftig bestandsforvaltning og samlet ressursforvaltning.",
+          "Tabell under fiskeri: «Styrkje føringstilskotet og auke tilskotet til selfangst».",
       },
     ],
     suggestedQuestion:
-      "Hvorfor mener Senterpartiet at staten bør øke støtten til selfangst, når departementet i behandlingen i 2024 opplyste at interessen både for fangsten og selprodukter hadde gått ned, og at tilskuddet hadde vært avgjørende for at rederier valgte å dra på fangst?",
-    representativeId: "geir-pollestad",
-    whyContactNow:
-      "Medlem av Næringskomiteen i inneværende periode. Relevant som nåværende kontaktpunkt for Senterpartiet i den komiteen som behandlet saken i 2024.",
-    contactSources: [
-      {
-        label: "Stortingets biografi — Geir Pollestad",
-        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=GP",
-        note: "Medlem av Næringskomiteen, periode 2025–2029.",
-      },
-      naringskomiteen,
-    ],
-    reasonVerifiedAt: "2026-09-23",
+      "Hvorfor mener Senterpartiet at staten bør øke støtten til selfangst?",
+    contact: {
+      representativeId: "geir-pollestad",
+      whyRelevant:
+        "Medlem av Næringskomiteen, som behandler saker på dette området.",
+      sources: [
+        {
+          label: "Stortingets biografi — Geir Pollestad",
+          url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=GP",
+          note: "Medlem av Næringskomiteen, periode 2025–2029.",
+        },
+        naringskomiteen,
+      ],
+      verifiedAt: "2026-09-23",
+    },
+    contentVerifiedAt: "2026-09-23",
   },
   {
     id: "sv",
     partyName: "Sosialistisk Venstreparti",
-    positionHeading: "Dokumentert standpunkt i 2024",
-    documentedPosition:
-      "Sto bak komiteens tilråding om at representantforslaget ikke skulle vedtas. Vi har ikke funnet et nyere offentlig SV-standpunkt som klart erstatter dokumentasjonen fra 2024.",
-    positionSources: [innstillingStance],
-    reasoningHeading: "SVs begrunnelse i 2024",
-    reasoning:
-      "SV argumenterte for fortsatt selfangst når fangsten er forskningsbasert, bærekraftig og dyrevelferdsmessig forsvarlig. Partiet viste også til at fjerning av subsidien kunne føre til at selfangstnæringen ble bygget ned.",
-    reasoningSources: [
+    focusHeading: "SVs begrunnelse i 2024",
+    focusParagraphs: [
+      "SV argumenterte i 2024 for fortsatt selfangst og viste blant annet til at fjerning av subsidien kunne føre til at næringen ble bygget ned.",
+    ],
+    focusSources: [
       {
         label: "Stortingsdebatten 19. juni 2024 — Torgeir Knag Fylkesnes (SV)",
         url: debatt,
@@ -232,59 +235,55 @@ export const selfangstChallengeParties: ChallengeParty[] = [
       },
     ],
     suggestedQuestion:
-      "SV argumenterte i 2024 for fortsatt selfangst og viste til at fjerning av subsidien kunne føre til at næringen ble bygget ned. Mener SV fortsatt at staten bør subsidiere selfangsten for å opprettholde næringen? Hvis ja, hva er begrunnelsen?",
-    representativeId: "ingrid-fiskaa",
-    whyContactNow:
-      "Medlem av Næringskomiteen i inneværende periode. Relevant som nåværende kontaktpunkt for SV i den komiteen som behandlet saken i 2024 — ikke som dokumentasjon av SVs standpunkt i dag.",
-    contactSources: [
-      {
-        label: "Stortingets biografi — Ingrid Fiskaa",
-        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=INF",
-        note: "Medlem av Næringskomiteen, periode 2025–2029.",
-      },
-      naringskomiteen,
-    ],
-    reasonVerifiedAt: "2026-09-23",
+      "Mener SV fortsatt at staten bør subsidiere selfangsten for å opprettholde næringen? Hvis ja, hva er begrunnelsen?",
+    contact: {
+      representativeId: "ingrid-fiskaa",
+      whyRelevant:
+        "Medlem av Næringskomiteen, som behandler saker på dette området.",
+      sources: [
+        {
+          label: "Stortingets biografi — Ingrid Fiskaa",
+          url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=INF",
+          note: "Medlem av Næringskomiteen, periode 2025–2029.",
+        },
+        naringskomiteen,
+      ],
+      verifiedAt: "2026-09-23",
+    },
+    contentVerifiedAt: "2026-09-23",
   },
   {
     id: "ap",
     partyName: "Arbeiderpartiet",
-    positionHeading: "Dokumentert standpunkt i 2024",
-    documentedPosition:
-      "Ap-medlemmer sto bak komiteens tilråding om at representantforslaget ikke skulle vedtas. Vi har ikke identifisert et eget Ap-hovedinnlegg i debatten med en separat partibegrunnelse tilsvarende Høyre, Sp og SV. Tilskuddet ble senere videreført og eksisterer fortsatt i 2026.",
-    positionSources: [
+    focusHeading: "Arbeiderpartiet i 2024",
+    focusParagraphs: [
+      "Arbeiderpartiet var i 2024 blant partiene som sto bak næringskomiteens tilråding om at forslaget om å fjerne subsidiene til selfangst ikke skulle vedtas.",
+      "Tilskuddet ble senere videreført og eksisterer fortsatt i 2026.",
+    ],
+    focusSources: [
       innstillingStance,
       {
         label: "Fiskeridirektoratet — Deltakelse i selfangst 2026",
         url: fiskeridir,
-        note: "Dokumenterer at tilskuddet fortsatt finnes i 2026.",
-      },
-    ],
-    reasoningHeading: "Regjeringens begrunnelse i 2024",
-    reasoning:
-      "Fiskeri- og havminister Marianne Sivertsen Næss (Ap) representerte regjeringen i debatten. Regjeringen la blant annet vekt på utnyttelse av kvotene, verdiskaping fra selprodukter, tradisjonell kunnskap og å opprettholde næringen mens markedet for selprodukter ble utviklet. Dette er regjeringens argumentasjon — ikke en separat, dokumentert Ap-partibegrunnelse i debatten.",
-    reasoningSources: [
-      {
-        label:
-          "Stortingsdebatten 19. juni 2024 — statsråd Marianne Sivertsen Næss",
-        url: debatt,
-        note:
-          "Hovedinnlegg: tilskuddet bidrar til å holde liv i næringen mens markedet utvikles; utnytte kvote; tradisjonell kunnskap.",
+        note: "Dokumenterer at tilskuddet fortsatt finnes.",
       },
     ],
     suggestedQuestion:
-      "Regjeringen begrunnet i 2024 tilskuddet blant annet med at det bidro til å opprettholde selfangstnæringen mens markedet for selprodukter ble utviklet. Tilskuddet eksisterer fortsatt i 2026. Mener Arbeiderpartiet at staten fortsatt bør bruke offentlige midler på å opprettholde næringen? Hvis ja, hva er begrunnelsen i dag?",
-    representativeId: "rune-stostad",
-    whyContactNow:
-      "Leder av Næringskomiteen i inneværende periode. Komitérollen gjør ham relevant for spørsmål om nærings- og fiskeripolitikk — ikke fordi den dokumenterer dagens partisyn på selfangststøtten.",
-    contactSources: [
-      {
-        label: "Stortingets biografi — Rune Støstad",
-        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=RUNSTS",
-        note: "Leder av Næringskomiteen, periode 2025–2029.",
-      },
-      naringskomiteen,
-    ],
-    reasonVerifiedAt: "2026-09-23",
+      "Mener Arbeiderpartiet fortsatt at staten bør subsidiere selfangsten? Hvis ja, hva er begrunnelsen?",
+    contact: {
+      representativeId: "rune-stostad",
+      whyRelevant:
+        "Leder av Næringskomiteen, som behandler saker på dette området.",
+      sources: [
+        {
+          label: "Stortingets biografi — Rune Støstad",
+          url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=RUNSTS",
+          note: "Leder av Næringskomiteen, periode 2025–2029.",
+        },
+        naringskomiteen,
+      ],
+      verifiedAt: "2026-09-23",
+    },
+    contentVerifiedAt: "2026-09-23",
   },
 ];

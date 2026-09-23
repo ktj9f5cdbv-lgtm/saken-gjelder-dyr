@@ -53,9 +53,10 @@ export default function InfluenceGuide() {
           <p>
             Når et parti allerede har motsatt seg en endring, undersøk
             begrunnelsen og om det finnes et nyere dokumentert standpunkt. Still
-            deretter et spørsmål som treffer det konkrete premisset — ikke en
-            generisk henvendelse til alle. Flaskehalsen er politisk motstand
-            eller manglende parlamentarisk støtte.
+            deretter et kort spørsmål som treffer det konkrete premisset — ikke
+            en generisk henvendelse til alle. Velg kontakt etter saksansvar når
+            det er kjent, ellers relevant komitérolle. Flaskehalsen er politisk
+            motstand eller manglende parlamentarisk støtte.
           </p>
 
           <h3>{ACTION_TYPE_LABELS.follow_up_decision}</h3>

@@ -152,6 +152,30 @@ export const representatives: Record<string, Representative> = {
     ],
     verifiedAt: "2026-09-23",
   },
+  "bard-ludvig-thorheim": {
+    id: "bard-ludvig-thorheim",
+    name: "Bård Ludvig Thorheim",
+    party: "Høyre",
+    roles: [
+      "Stortingsrepresentant for Nordland",
+      "Medlem av Næringskomiteen",
+    ],
+    email: "bard.ludvig.thorheim@stortinget.no",
+    profileUrl:
+      "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=BRDTHO",
+    profileSources: [
+      {
+        label: "Stortingets biografi for Bård Ludvig Thorheim",
+        url: "https://www.stortinget.no/no/Representanter-og-komiteer/Representantene/Representant/?perid=BRDTHO",
+        note: "Medlem av Næringskomiteen, periode 2025–2029.",
+      },
+      {
+        label: "Representantenes e-postadresser",
+        url: "https://www.stortinget.no/no/Stottemeny/kontakt/representanter-og-partigrupper/Representantenes-e-postadresser/",
+      },
+    ],
+    verifiedAt: "2026-09-23",
+  },
   "geir-pollestad": {
     id: "geir-pollestad",
     name: "Geir Pollestad",

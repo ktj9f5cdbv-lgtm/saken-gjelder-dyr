@@ -796,6 +796,11 @@ footer p { margin: 0; }
   font-size: 1.0625rem;
   line-height: 1.55;
 }
+.challenge-why-contact {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: .9375rem;
+}
 .challenge-party .rep-name {
   margin: 0 0 4px;
   font: 600 1.05rem/1.35 Arial, Helvetica, sans-serif;
