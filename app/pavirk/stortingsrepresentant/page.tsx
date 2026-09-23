@@ -106,7 +106,7 @@ export default function ContactRepresentativeGuide() {
         <section className="case-block" aria-labelledby="skrive">
           <h2 id="skrive">Hva bør du skrive?</h2>
           <ol className="case-steps">
-            <li>Kort hva saken gjelder, og hvorfor den angår dyr.</li>
+            <li>Kort hva saken gjelder.</li>
             <li>Én eller to kilder (vedtak, høring, spørsmål).</li>
             <li>Én konkret anmodning — for eksempel status og tidsplan fra statsråden.</li>
           </ol>
