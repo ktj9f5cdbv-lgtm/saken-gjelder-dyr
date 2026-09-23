@@ -73,11 +73,8 @@ export default function ContactRepresentativeGuide() {
           </p>
           <ul className="case-bullets">
             <li>
-              <strong>Fagkomité.</strong> For landbruk og mat:{" "}
-              <a href={naringskomiteen} target="_blank" rel="noopener noreferrer">
-                Næringskomiteen
-              </a>
-              .
+              <strong>Fagkomité.</strong> Medlemmer i komiteen som behandler
+              saken har ofte mer direkte innflytelse på utfallet.
             </li>
             <li>
               <strong>Dokumentert engasjement.</strong> Spørsmål, forslag eller merknader om saken gir en konkret inngang.
@@ -90,7 +87,11 @@ export default function ContactRepresentativeGuide() {
             </li>
           </ul>
           <p>
-            På sakssidene foreslår vi personer når vi har kildebelagte begrunnelser. Ellers:{" "}
+            På sakssidene foreslår vi personer når vi har kildebelagte begrunnelser. For landbruk og mat er det for eksempel{" "}
+            <a href={naringskomiteen} target="_blank" rel="noopener noreferrer">
+              Næringskomiteen
+            </a>
+            . Ellers:{" "}
             <a href={representanter} target="_blank" rel="noopener noreferrer">
               alle representanter
             </a>
