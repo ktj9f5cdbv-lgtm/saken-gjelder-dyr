@@ -36,7 +36,10 @@ export function Newsletter() {
       <h2 id="saksvarsler-title">Få beskjed når du kan påvirke</h2>
       <div>
         <p>
-          Saksvarsler på e-post om nye høringer og politiske saker som angår dyr, viktige frister og utviklingen i sakene vi følger — med forklaring på hva du kan gjøre.
+          Saksvarsler på e-post når det åpner seg en mulighet til å påvirke en
+          sak som gjelder dyr — for eksempel en høring, en innspillsrunde eller
+          et politisk behandlingspunkt. Kort forklaring på saken, fristen og hva
+          du kan gjøre.
         </p>
         <a
           className="coral-button"

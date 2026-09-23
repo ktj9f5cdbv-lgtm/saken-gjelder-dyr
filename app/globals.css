@@ -642,6 +642,11 @@ footer p { margin: 0; }
 .focused .featured-story.text-only .featured-copy h2 { max-width: none; }
 .focused .featured-copy .kicker { margin-bottom: 12px; }
 .focused .featured-copy .coral-button { margin-top: 8px; }
+.focused .featured-copy .underlined-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: .975rem;
+}
 .focused .featured-copy .action-now { color: var(--ink); font-size: 1rem; }
 .action-now strong { font-weight: 500; }
 .focused .quick-sources { font-size: .875rem; margin: 18px 0 0; }
@@ -679,6 +684,42 @@ footer p { margin: 0; }
 }
 .case-block .case-timeline { border-top: 0; padding-top: 8px; margin-bottom: 8px; }
 .case-block .case-timeline ol { margin-top: 12px; }
+.watch-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+.watch-item {
+  padding: 20px 0;
+  border-top: 1px solid var(--hairline);
+}
+.watch-item:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+.watch-item h3 {
+  font: 600 1.125rem/1.35 Arial, sans-serif;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+}
+.watch-item p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: .975rem;
+}
+.watch-item .watch-related {
+  margin: 0 0 8px;
+}
+.watch-item .watch-related a {
+  font-size: .9375rem;
+}
+.watch-item .source-note {
+  margin: 0 0 8px;
+}
+.watch-item .source-note:last-child {
+  margin-bottom: 0;
+}
 .focused .about-project { padding: 34px 0 20px; gap: 40px; }
 .focused .about-project h2 { font-size: 1.8rem; }
 .focused .about-project p { margin-bottom: 15px; }

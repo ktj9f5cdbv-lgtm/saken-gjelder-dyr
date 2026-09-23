@@ -2,6 +2,7 @@ import { Header, Footer, Newsletter, Contact } from "./site-parts";
 import { CaseProcessLabel } from "@/components/case-process-label";
 import { ACTION_TYPE_LABELS } from "@/content/action-types";
 import { caseActionTypes } from "@/content/cases/registry";
+import { statsbudsjettStatusLine } from "@/content/cases/statsbudsjettet-2027";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         <section className="editorial-intro" aria-labelledby="intro-title">
           <h1 id="intro-title">Finn ut når og hvordan du kan påvirke</h1>
           <p className="intro-text">
-            Politiske beslutninger former dyrs hverdag. Her får du aktuelle saker, frister og en enkel vei til å sende høringsuttalelse, innspill eller kontakte en politiker — med kilder du kan sjekke selv.
+            Når beslutninger som gjelder dyr kan påvirkes, viser vi deg hva
+            saken gjelder og hva du kan gjøre — med frist, offisiell kanal og
+            kilder du kan sjekke selv.
           </p>
         </section>
 
@@ -54,11 +57,34 @@ export default function Home() {
             </div>
           </article>
 
+          <article className="featured-story text-only secondary-case" aria-labelledby="statsbudsjett-title">
+            <div className="featured-copy">
+              <p className="kicker kicker-theme">Statsbudsjettet · 2027</p>
+              <CaseProcessLabel kind="following">
+                {statsbudsjettStatusLine}
+              </CaseProcessLabel>
+              <h2 id="statsbudsjett-title">
+                <a href="/saker/statsbudsjettet-2027">
+                  Statsbudsjettet 2027: Dette følger vi med på
+                </a>
+              </h2>
+              <p>
+                7. oktober legger regjeringen fram sitt forslag. Vi går gjennom
+                budsjettet for forslag som kan få betydning for dyr — og følger
+                dem gjennom Stortingets behandling.
+              </p>
+              <p className="case-status">Vi følger saken.</p>
+              <a className="underlined-link" href="/saker/statsbudsjettet-2027">
+                Se oversikten <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
           <article className="featured-story text-only secondary-case" aria-labelledby="oppdrett-title">
             <div className="featured-copy">
               <p className="kicker kicker-theme">Oppdrettsfisk · Fiskevelferd</p>
               <CaseProcessLabel kind="hearing">
-                {ACTION_TYPE_LABELS[caseActionTypes.oppdrettsfisk]} · Frist 31. oktober 2027
+                Åpent for innspill · Frist 31. oktober 2027
               </CaseProcessLabel>
               <h2 id="oppdrett-title">
                 <a href="/saker/oppdrettsfisk">Gi innspill om fiskevelferd i oppdrett</a>
@@ -113,10 +139,14 @@ export default function Home() {
           <h2 id="motivation-title">Motivasjonen bak nettstedet</h2>
           <div>
             <p>
-              Målet er å bidra til at dyr får bedre liv. Det skal være lettere å finne fram til beslutningene som berører dem – og mulighetene til å påvirke.
+              Målet er å bidra til at dyr får bedre liv. Vi finner saker der
+              beslutninger som angår dyr kan påvirkes, forklarer hva saken
+              gjelder og viser konkret hva du kan gjøre.
             </p>
             <p>
-              Siden tar dyrenes parti. Vi skiller mellom det kildene dokumenterer, det myndighetene foreslår, og det vi selv mener bør endres.
+              Siden tar dyrenes parti. Vi skiller mellom det kildene
+              dokumenterer, det myndighetene foreslår, og det vi selv mener bør
+              endres.
             </p>
             <p className="author-signature">
               Saken gjelder dyr er et privat initiativ startet av Jørund Moltubakk.

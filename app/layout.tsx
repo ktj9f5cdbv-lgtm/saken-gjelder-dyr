@@ -2,8 +2,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sakengjelderdyr.no"),
   title: "Saken gjelder dyr",
-  description: "Politiske saker som påvirker dyr – forklart, dokumentert og mulig å påvirke.",
+  description:
+    "Når beslutninger som gjelder dyr kan påvirkes, viser vi deg hva saken gjelder og hva du kan gjøre.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

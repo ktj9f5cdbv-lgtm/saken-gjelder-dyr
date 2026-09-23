@@ -10,10 +10,14 @@ type Props = {
 };
 
 /**
- * Kort, saksspesifikt skriveeksempel. Senker terskelen uten å være en stor CTA.
+ * Kort, saksspesifikt skriveeksempel. Senker terskelen uten å være kopieringsplikt.
  * Brukes der leseren skal formulere egen tekst (høringsuttalelse, innspill, e-post).
  */
+const DEFAULT_NOTE =
+  "Bruk gjerne eksemplet som hjelp til å komme i gang, men skriv med egne ord og ta bare med argumenter du selv står for.";
+
 export function ActionExample({ title, premise, example, note }: Props) {
+  const resolvedNote = note === undefined ? DEFAULT_NOTE : note;
   return (
     <aside className="action-example" aria-label={title}>
       <h3 className="action-example-title">{title}</h3>
@@ -21,7 +25,9 @@ export function ActionExample({ title, premise, example, note }: Props) {
       <div className="action-example-body">
         <p>{example}</p>
       </div>
-      {note ? <p className="action-example-note">{note}</p> : null}
+      {resolvedNote ? (
+        <p className="action-example-note">{resolvedNote}</p>
+      ) : null}
     </aside>
   );
 }

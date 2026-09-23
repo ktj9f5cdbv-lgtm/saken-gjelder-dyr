@@ -4,9 +4,13 @@ Status 22. september 2026. Dette beskriver beslutningene som skal følge prosjek
 
 ## Formål og tilbud
 
-Formålet er å bidra til en bedre hverdag for dyr ved å gjøre politisk påvirkning lettere tilgjengelig i norsk sammenheng. Leseren skal finne aktuelle saker, forstå hva de gjelder og få konkret hjelp til å bruke stemmen sin.
+**Kjernefunksjon:** Saken gjelder dyr finner saker der beslutninger som angår dyr kan påvirkes, forklarer hva saken gjelder og viser konkret hva en vanlig person kan gjøre.
 
-Nettstedet tilbyr korte forklaringer, tydelig status og frister, synlige kilder og forslag til hva leseren kan gjøre. Det skal være lett å finne veien fra en sak til en konkret handling. Ikke lov at en handling sikrer gjennomslag.
+Dette er ikke primært en høringsportal. En høring er én type påvirkningsmulighet; andre kan være innspillsrunde, Storting-/komitébehandling, regelverksarbeid der politikere kan kontaktes, eller andre dokumenterbare påvirkningspunkter. Ikke konstruer en mulighet der det ikke finnes en reell kanal eller et reelt tidspunkt.
+
+Formålet er å bidra til en bedre hverdag for dyr. Nettstedet tilbyr korte forklaringer, tydelig status og frister, synlige kilder og forslag til hva leseren kan gjøre. Det skal være lett å finne veien fra en sak til en konkret handling. Ikke lov at en handling sikrer gjennomslag.
+
+Høringene, sakssidene, påvirkningsveiledningen, saksvarsleren og skriveeksemplene er i hovedsak på riktig spor. Ny kunnskap skjerper definisjonen av hva de til sammen utgjør — den underkjenner ikke det som allerede er bygget. Ikke «forbedre» hele nettstedet når produktdefinisjonen oppdateres.
 
 Prosjektet er et personlig initiativ. Det er ikke etablert som en organisasjon i dette arbeidet. Ikke presenter det som en registrert organisasjon eller tilskriv det samarbeid som ikke er avtalt.
 
@@ -38,7 +42,7 @@ Meny: Saker · Påvirk · Om siden · Saksvarsler · Kontakt.
 Hver sak på forsiden og sakssiden følger samme to linjer over tittelen:
 
 1. Emneord som ren tekst (`kicker-theme`, dempet): f.eks. «Høner · Burhold», «Selfangst · Statsstøtte»
-2. Prosessikon + **handlingstype** i korall (`CaseProcessLabel`): f.eks. «Send høringsinnspill · Frist …», «Utfordre et standpunkt», «Be om oppfølging av vedtak». Skil handlingstype (hva) fra kanal (e-post/høringsskjema). Ikke bruk «Kontakt politiker» som handlingstype.
+2. Prosessikon + **handlingstype eller prosess-status** i korall (`CaseProcessLabel`): f.eks. «Send høringsinnspill · Frist …», «Utfordre et standpunkt», «Be om oppfølging av vedtak», eller «Venter på forslag – 7. oktober 2026» (`kind="following"`). Skil handlingstype (hva) fra kanal (e-post/høringsskjema) og fra prosess-stadium (hvor i løpet). Ikke bruk «Kontakt politiker» som handlingstype.
 
 Ikonfiler: `components/case-process-label.tsx` (SVG med `currentColor`). Kildeutkast i `public/icons/`. Ikonene er ikke egne klikkmål; teksten formidler betydningen. Status (åpen/avsluttet høring) skal alltid stå i tekst.
 
@@ -50,7 +54,8 @@ Nettstedet har tre funksjonelle spor. Behold forskjellene; ikke tving dem sammen
 
 1. **Åpen høring** (høner, hester): status med frist, høringsuttalelse via Mattilsynet, saksgang, «sist kontrollert», kilder.
 2. **Åpen innspillsrunde** (oppdrettsfisk): skriftlig innspill til departement via regjeringen.no; frist kan være ikke-absolutt.
-3. **Storting-kontakt** (griser, selfangst): forklaring → `#pavirke` → `CaseContactModule` → expandable brevutkast → saksgang → kilder.
+3. **Storting-kontakt** (griser, selfangst): forklaring → `#pavirke` → `CaseContactModule` / `ChallengePositionModule` → saksgang → kilder.
+4. **Prosess-oversikt uten CTA** (statsbudsjettet 2027): stadium, hva vi følger, tidslinje — handling først når konkrete forslag er kjent.
 
 ### Eksempel på handling (`ActionExample`)
 
@@ -67,7 +72,9 @@ Når et forslag er behandlet og falt: skriv «stemte ned» / «fikk ikke flertal
 
 ## Påvirkningsmodell
 
-Før nettstedet anbefaler en handling, identifiser **ønsket endring → politisk status → flaskehals → relevant handling**.
+Før nettstedet anbefaler en handling, identifiser **ønsket endring → politisk status → stadium i prosessen → flaskehals → relevant handling**.
+
+**Prosess-stadium** (`content/process-stages.ts`) forteller *hvor* i beslutningsprosessen saken er (f.eks. venter på forslag, behandles i Stortinget, vedtak gjort). Det er skilt fra handlingstype. En handling kan være relevant på ett tidspunkt og lite relevant på et annet — anbefal handling når den faktisk kan ha betydning. Statsbudsjettet 2027 er første test: forhåndssak uten CTA mens stadium er `awaiting_proposal`.
 
 Fire handlingstyper (`content/action-types.ts`):
 
@@ -140,13 +147,14 @@ Bildene skal velges med omtanke for hva de faktisk dokumenterer. Unngå idyllise
 
 ## Saker vi følger
 
-Nettsiden følger fem saker:
+Nettsiden følger seks saker:
 
 1. **Høner ut av bur** — åpen Mattilsyn-høring om forbud mot innredede bur for verpehøns. Høringsfrist 1. oktober 2026. Forslaget har to trinn (stopp for nye bur ved ikrafttredelse; totalforbud foreslått fra 1. januar 2030). Datoene er forslag, ikke vedtak. Leseren kan sende høringsuttalelse via Mattilsynets høringstjeneste. Redaksjonelt standpunkt: støtte forbud og raskest mulig overgang av hensyn til hønene. Hovedopplysninger er kontrollert mot Mattilsynets høringsside; fullstendige høringsvedlegg gjenstår å gjennomgå.
 2. **Utstyr til hest** — åpen Mattilsyn-høring om bestilling til VKM om hvordan utstyr påvirker hestevelferd. Høringsfrist 1. oktober 2026. Høringen gjelder hva som skal undersøkes, ikke et ferdig utstyrsforbud. Redaksjonelt standpunkt: utredning som gir tydelig grunnlag for å beskytte hester mot skadelig og belastende utstyr; forslag om blant annet uttrykkelig omtale av pisk. Hovedopplysninger er kontrollert mot Mattilsynets høringsside; fullstendige høringsvedlegg gjenstår å gjennomgå.
-3. **Oppdrettsfisk · fiskevelferd** — åpen innspillsrunde hos Nærings- og fiskeridepartementet om oppfølging av havbruksmeldingen. Status åpen; oppgitt frist 31. oktober 2027 (ikke absolutt). Dødelighet i sjøfasen 2025: 54,9 millioner laks / 14,2 % (nedgang fra 15,4 % i 2024 og 16,7 % i 2023) ifølge Veterinærinstituttet. Leseren kan sende skriftlig innspill. Kontrollert 22. september 2026.
-4. **Bedre regler for griser** — `follow_up_decision`. Ønsket endring: oppdaterte regler for hold av svin. Politisk status: Stortingets vedtak 563 ber regjeringen snarest endre forskriften. Flaskehals: oppfølging/gjennomføring (ingen bekreftet samlet tidsplan for bred forskriftsendring; smal fødebinge-høring er egne vedtak 564/565). Handling: be om oppfølging via stortingsrepresentant. Kontaktbegrunnelser: offentlige kilder (qnid 116157, Innst. 452 S, komitéverv) — ikke private e-poster. Sist kontrollert 23. september 2026.
-5. **Statsstøtte til selfangst** — `challenge_position`. Ønsket endring: fjerne statsstøtten. Flaskehals: manglende parlamentarisk støtte etter Dok. 8:152 S / Innst. 423 S (votering 19. juni 2024: 94–6). Handling: korte, partitilpassede spørsmål til Ap, H, Sp og SV. H-kontakt: Bård Ludvig Thorheim (saksfelt for Høyre i Næringskomiteen); Sp: Pollestad; SV: Fiskaa; Ap: Støstad. Ap-kortet bygger på tilrådingen i Innst. 423 S (ikke statsrådens regjeringsinnlegg — det står som egen bakgrunn). Sp har nyere retning i alternativt budsjett 2026. Dagens ordning: Fiskeridirektoratets 2026-side. Private testhenvendelser publiseres ikke. Sist kontrollert 23. september 2026.
+3. **Statsbudsjettet 2027** — forhåndsoversikt (`awaiting_proposal`). Ingen påvirkningsknapp før konkrete forslag er kjent. Status: venter på regjeringens forslag 7. oktober 2026 (bekreftet av Stortinget; sperrefrist kl. 10.00 på regjeringen.no). Følger bl.a. selfangsttilskudd (1,5 mill. avsatt i 2026 ifølge Fiskeridirektoratet), Mattilsynet, oppdrettsfisk, oppfølging av dyrevelferdsmeldingen, landbrukskrav og 3R. Test av generell prosess-stadium-modell (`content/process-stages.ts`). Oppdateres etter framleggelsen — ikke erstattes. Sist kontrollert 23. september 2026.
+4. **Oppdrettsfisk · fiskevelferd** — åpen innspillsrunde hos Nærings- og fiskeridepartementet om oppfølging av havbruksmeldingen. Status åpen; oppgitt frist 31. oktober 2027 (ikke absolutt). Dødelighet i sjøfasen 2025: 54,9 millioner laks / 14,2 % (nedgang fra 15,4 % i 2024 og 16,7 % i 2023) ifølge Veterinærinstituttet. Leseren kan sende skriftlig innspill. Kontrollert 22. september 2026.
+5. **Bedre regler for griser** — `follow_up_decision`. Ønsket endring: oppdaterte regler for hold av svin. Politisk status: Stortingets vedtak 563 ber regjeringen snarest endre forskriften. Flaskehals: oppfølging/gjennomføring (ingen bekreftet samlet tidsplan for bred forskriftsendring; smal fødebinge-høring er egne vedtak 564/565). Handling: be om oppfølging via stortingsrepresentant. Kontaktbegrunnelser: offentlige kilder (qnid 116157, Innst. 452 S, komitéverv) — ikke private e-poster. Sist kontrollert 23. september 2026.
+6. **Statsstøtte til selfangst** — `challenge_position`. Ønsket endring: fjerne statsstøtten. Flaskehals: manglende parlamentarisk støtte etter Dok. 8:152 S / Innst. 423 S (votering 19. juni 2024: 94–6). Handling: korte, partitilpassede spørsmål til Ap, H, Sp og SV. H-kontakt: Bård Ludvig Thorheim (saksfelt for Høyre i Næringskomiteen); Sp: Pollestad; SV: Fiskaa; Ap: Støstad. Ap-kortet bygger på tilrådingen i Innst. 423 S (ikke statsrådens regjeringsinnlegg — det står som egen bakgrunn). Sp har nyere retning i alternativt budsjett 2026. Dagens ordning: Fiskeridirektoratets 2026-side. Private testhenvendelser publiseres ikke. Sist kontrollert 23. september 2026.
 
 Ikke fremstill en utgått høring som åpen eller et forslag som vedtatt.
 
@@ -192,6 +200,14 @@ Primærkilder for oppdrettsfisk:
 - [Veterinærinstituttet — Dødelighet i lakseoppdrett i 2025](https://www.vetinst.no/nyheter/dodelighet-i-lakseoppdrett-i-2025)
 - [Meld. St. 24 (2024–2025)](https://www.regjeringen.no/no/dokumenter/meld.-st.-24-20242025/id3097131/)
 
+Primærkilder for statsbudsjettet 2027 (forhåndssak):
+
+- [Stortinget — Budsjetthøringer høsten 2026](https://www.stortinget.no/no/Hva-skjer-pa-Stortinget/Nyhetsarkiv/Hva-skjer-nyheter/2025-2026/budsjetthoringer-hosten-2026/) (framleggelse onsdag 7. oktober)
+- [Stortinget — Budsjettarbeidet](https://www.stortinget.no/no/Stortinget-og-demokratiet/Arbeidet/Budsjettarbeidet/)
+- [Regjeringen — forhåndsbestilling](https://www.regjeringen.no/no/statsbudsjett/2027/forhandsbestilling-av-statsbudsjettet/id2511165/) (sperrefrist 7. oktober kl. 10.00)
+- [Rundskriv R-4/2026 (PDF)](https://www.regjeringen.no/globalassets/departementene/fin/rundskriv/arlige/2026/r-4-2026.pdf) (budsjettkalender; 7. oktober tentativt)
+- Etter 7. oktober: Prop. 1 S / Gul bok, komitéinnstillinger, partienes alternative budsjetter
+
 ## Videre arbeid
 
 1. ~~Sette kontakt-e-post~~ — satt til `kontakt@sakengjelderdyr.no`.
@@ -201,5 +217,6 @@ Primærkilder for oppdrettsfisk:
 5. Eventuelle dokumentariske bilder bare med avklart bruksrett.
 6. Vedlikehold representanters e-post/roller i `content/representatives/` ved endringer på stortinget.no.
 7. **Evaluer modellene på selfangst (`challenge_position`) og griser (`follow_up_decision`)** før øvrige saker endres ytterligere. Oppdrett/høringer er `hearing`.
+8. **Oppdater statsbudsjett-2027** når Prop. 1 S foreligger 7. oktober 2026 — marker relevante områder, konkrete beløp, egne påvirkningssaker der det trengs.
 
 Nettsiden skal fortsatt være privat. Ikke gjør den offentlig uten en uttrykkelig ny beskjed fra brukeren.

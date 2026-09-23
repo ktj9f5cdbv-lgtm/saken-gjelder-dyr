@@ -10,9 +10,10 @@ export function PoliticalHistory({
   title = "Politisk status",
   steps,
 }: Props) {
+  const headingId = "timeline-heading";
   return (
-    <section className="case-block" aria-labelledby="politisk-status-title">
-      <h2 id="politisk-status-title">{title}</h2>
+    <section className="case-block" aria-labelledby={headingId}>
+      <h2 id={headingId}>{title}</h2>
       <div className="case-timeline political-history" aria-label={title}>
         <ol>
           {steps.map((step) => (

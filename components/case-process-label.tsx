@@ -50,14 +50,42 @@ export function ContactPoliticianIcon({ className }: IconProps) {
   );
 }
 
+/** Følge-sak uten aktiv påvirkningsknapp — f.eks. forhåndssak. */
+export function FollowIcon({ className }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+      className={className}
+    >
+      <circle cx="12" cy="12" r="7.25" />
+      <circle cx="12" cy="12" r="2.25" />
+    </svg>
+  );
+}
+
 type ProcessLabelProps = {
-  kind: "hearing" | "politician";
+  kind: "hearing" | "politician" | "following";
   children: ReactNode;
 };
 
 /** Andre linje over sakstittel: prosessikon + status/handlingstekst. */
 export function CaseProcessLabel({ kind, children }: ProcessLabelProps) {
-  const Icon = kind === "hearing" ? HearingIcon : ContactPoliticianIcon;
+  const Icon =
+    kind === "hearing"
+      ? HearingIcon
+      : kind === "following"
+        ? FollowIcon
+        : ContactPoliticianIcon;
   return (
     <p className="case-process">
       <Icon className="case-process-icon" />

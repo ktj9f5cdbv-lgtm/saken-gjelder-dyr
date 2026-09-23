@@ -29,12 +29,15 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `app/saker/griser/page.tsx` | Grisesaken: Storting-spor, brevutkast, saksgang og kilder |
 | `app/saker/griser/letter.tsx` | Kopierbart politisk brevutkast |
 | `app/saker/selfangst/page.tsx` | Selfangstsaken: Storting-spor, utfordre standpunkt |
+| `app/saker/statsbudsjettet-2027/page.tsx` | Statsbudsjettet 2027: forhåndsoversikt, prosess-stadium |
 | `app/globals.css` | Felles stil og mobiltilpasning |
 | `app/layout.tsx` | Språk og sidemetadata |
 | `app/pavirk/page.tsx` | Slik kan du påvirke — fire handlingstyper |
 | `app/pavirk/stortingsrepresentant/page.tsx` | Veiledning: kontakt stortingsrepresentant |
 | `content/action-types.ts` | Handlingstyper (hearing, request_action, challenge_position, follow_up_decision) |
+| `content/process-stages.ts` | Prosess-stadium (hvor i beslutningsprosessen saken er) |
 | `content/cases/selfangst.ts` | Selfangst: challenge_position-data |
+| `content/cases/statsbudsjettet-2027.ts` | Statsbudsjett 2027: watch-områder og tidslinje |
 | `content/representatives/` | Felles representantdata |
 | `content/case-contacts/` | Saksvise kontaktforslag (eldre modell) |
 | `components/case-process-label.tsx` | Prosessikoner (høring / kontakt politiker) |
@@ -45,7 +48,7 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `public/icons/` | SVG-kilder for prosessikonene |
 | `archive/` | Tidligere designforsøk og ChatGPT-eksport — **ikke** publiserte sider |
 
-Tre saksspor: **åpen høring** (høner/hester), **innspillsrunde** (oppdrettsfisk) og **Storting-handling** (griser / selfangst med ulike handlingstyper). Selfangst er første sak på `challenge_position` med partitilpassede spørsmål (ikke generisk e-postmal). Der leseren skal skrive selv i andre saker: bruk `ActionExample`.
+Tre saksspor med påvirkning: **åpen høring** (høner/hester), **innspillsrunde** (oppdrettsfisk) og **Storting-handling** (griser / selfangst med ulike handlingstyper). I tillegg: **prosess-oversikt** (statsbudsjettet 2027) uten CTA mens stadium er `awaiting_proposal`. Selfangst er første sak på `challenge_position` med partitilpassede spørsmål (ikke generisk e-postmal). Der leseren skal skrive selv i andre saker: bruk `ActionExample`.
 
 ## Avgrensning
 
