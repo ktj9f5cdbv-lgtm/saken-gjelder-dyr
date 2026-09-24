@@ -121,11 +121,7 @@ export default function HenCase() {
           <a className="coral-button" href={hearingSubmit} target="_blank" rel="noopener noreferrer">
             Gå til høringstjenesten <span aria-hidden="true">↗</span>
           </a>
-          <ShareCaseButton
-            title={share.title}
-            text={share.summary}
-            url={absoluteUrl(`/saker/${share.slug}`)}
-          />
+          <ShareCaseButton url={absoluteUrl(`/saker/${share.slug}`)} />
           <p className="action-context">
             Dette er en høringsuttalelse til Mattilsynet, ikke en henvendelse til Stortinget. Trenger du hjelp til å kontakte en politiker i andre saker, se{" "}
             <a href="/pavirk/stortingsrepresentant">veiledningen om stortingsrepresentanter</a>.

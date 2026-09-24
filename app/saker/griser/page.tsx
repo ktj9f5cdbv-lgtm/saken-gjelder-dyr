@@ -122,11 +122,7 @@ export default function PigCase() {
               Finn kontaktinformasjon <span aria-hidden="true">→</span>
             </a>
           </p>
-          <ShareCaseButton
-            title={share.title}
-            text={share.summary}
-            url={absoluteUrl(`/saker/${share.slug}`)}
-          />
+          <ShareCaseButton url={absoluteUrl(`/saker/${share.slug}`)} />
         </section>
 
         <CaseContactModule

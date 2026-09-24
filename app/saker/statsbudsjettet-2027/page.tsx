@@ -131,11 +131,7 @@ export default function Statsbudsjett2027Page() {
             å gi innspill. Konkrete konflikter kan bli egne saker — denne siden
             er oversikten.
           </p>
-          <ShareCaseButton
-            title={share.title}
-            text={share.summary}
-            url={absoluteUrl(`/saker/${share.slug}`)}
-          />
+          <ShareCaseButton url={absoluteUrl(`/saker/${share.slug}`)} />
         </section>
 
         <section className="case-block" aria-labelledby="kilder">

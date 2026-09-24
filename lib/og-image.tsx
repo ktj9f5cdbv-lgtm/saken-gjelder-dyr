@@ -10,11 +10,19 @@ const muted = "#68635e";
 
 type CaseOgProps = {
   title: string;
-  alt?: string;
 };
+
+function titleLines(title: string): string[] {
+  const idx = title.indexOf(": ");
+  if (idx === -1) return [title];
+  return [title.slice(0, idx + 1), title.slice(idx + 2)];
+}
 
 /** Standard delingskort for en sak: wordmark + sakstittel. */
 export function caseOgImage({ title }: CaseOgProps) {
+  const lines = titleLines(title);
+  const fontSize = title.length > 48 ? 42 : 50;
+
   return new ImageResponse(
     (
       <div
@@ -26,7 +34,6 @@ export function caseOgImage({ title }: CaseOgProps) {
           justifyContent: "space-between",
           background: canvas,
           padding: "72px 80px",
-          fontFamily: "Georgia, 'Times New Roman', serif",
         }}
       >
         <div
@@ -61,14 +68,18 @@ export function caseOgImage({ title }: CaseOgProps) {
           />
           <div
             style={{
-              fontSize: title.length > 48 ? 44 : 52,
+              display: "flex",
+              flexDirection: "column",
+              fontSize,
               lineHeight: 1.2,
               letterSpacing: "-0.03em",
               color: ink,
-              display: "flex",
+              gap: 4,
             }}
           >
-            {title}
+            {lines.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
           </div>
         </div>
       </div>
@@ -90,7 +101,6 @@ export function siteOgImage() {
           justifyContent: "center",
           background: canvas,
           padding: "72px 80px",
-          fontFamily: "Georgia, 'Times New Roman', serif",
         }}
       >
         <div
@@ -113,7 +123,6 @@ export function siteOgImage() {
             lineHeight: 1.45,
             color: muted,
             maxWidth: 820,
-            fontFamily: "Arial, Helvetica, sans-serif",
             display: "flex",
           }}
         >

@@ -171,11 +171,7 @@ export default function SealHuntCase() {
           mailSubject="Statsstøtte til selfangst"
         />
 
-        <ShareCaseButton
-          title={share.title}
-          text={share.summary}
-          url={absoluteUrl(`/saker/${share.slug}`)}
-        />
+        <ShareCaseButton url={absoluteUrl(`/saker/${share.slug}`)} />
 
         <p className="article-meta case-verified">
           Sist kontrollert: 23. september 2026. Handlingstype:{" "}

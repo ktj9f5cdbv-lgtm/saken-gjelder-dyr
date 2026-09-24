@@ -123,11 +123,7 @@ export default function FarmedFishCase() {
               Send innspill <span aria-hidden="true">→</span>
             </a>
           </p>
-          <ShareCaseButton
-            title={share.title}
-            text={share.summary}
-            url={absoluteUrl(`/saker/${share.slug}`)}
-          />
+          <ShareCaseButton url={absoluteUrl(`/saker/${share.slug}`)} />
           <p className="action-context">
             Innspillet går til Nærings- og fiskeridepartementet via den digitale
             postkassen på regjeringen.no. Tilpass teksten slik at du står inne

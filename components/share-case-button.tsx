@@ -5,9 +5,6 @@ import { useState } from "react";
 type Props = {
   /** Canonical URL til saken (absolutt). */
   url: string;
-  title: string;
-  /** Kort tekst til native share når støttet. */
-  text?: string;
 };
 
 function ShareIcon() {
@@ -34,9 +31,10 @@ function ShareIcon() {
 
 /**
  * Sekundær deling — ikke politisk handlingstype.
- * Web Share API der det støttes; ellers kopier canonical URL.
+ * Native share sender bare URL (uten title/text), så tjenester
+ * som Instagram ikke gjentar tittelen over preview-kortet.
  */
-export function ShareCaseButton({ url, title, text }: Props) {
+export function ShareCaseButton({ url }: Props) {
   const [status, setStatus] = useState("");
 
   async function copyLink() {
@@ -66,11 +64,8 @@ export function ShareCaseButton({ url, title, text }: Props) {
 
   async function onShare() {
     setStatus("");
-    const payload = {
-      title,
-      text: text ?? title,
-      url,
-    };
+    // Kun URL — tittel/beskrivelse kommer fra Open Graph-metadata.
+    const payload = { url };
 
     if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
       try {
@@ -87,7 +82,6 @@ export function ShareCaseButton({ url, title, text }: Props) {
         if (error instanceof DOMException && error.name === "AbortError") {
           return;
         }
-        // Fall gjennom til kopiering ved andre feil.
       }
     }
 

@@ -7,20 +7,25 @@ import { SITE_NAME, siteShare } from "@/content/site";
 
 const ogImageSize = { width: 1200, height: 630 } as const;
 
-function openGraphImages(custom?: string) {
-  if (!custom) return undefined;
-  return [
-    {
-      url: custom,
-      width: ogImageSize.width,
-      height: ogImageSize.height,
-      alt: SITE_NAME,
-    },
-  ];
+/** Statisk delingsbilde i public/og/ — absolutte URL-er via metadataBase. */
+function ogImageEntry(path: string, alt: string) {
+  return {
+    url: path,
+    width: ogImageSize.width,
+    height: ogImageSize.height,
+    alt,
+    type: "image/png" as const,
+  };
 }
 
-/** Metadata for forsiden. opengraph-image.tsx i app/ dekker standardbildet. */
+function defaultCaseOgPath(share: CaseShare): string {
+  return share.shareImage ?? `/og/${share.slug}.png`;
+}
+
+/** Metadata for forsiden. */
 export function buildSiteMetadata(): Metadata {
+  const images = [ogImageEntry("/og/default.png", SITE_NAME)];
+
   return {
     title: SITE_NAME,
     description: siteShare.summary,
@@ -32,22 +37,22 @@ export function buildSiteMetadata(): Metadata {
       type: "website",
       locale: "nb_NO",
       siteName: SITE_NAME,
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title: siteShare.title,
       description: siteShare.summary,
+      images: ["/og/default.png"],
     },
   };
 }
 
-/**
- * Metadata for en saksside.
- * Generert opengraph-image.tsx i saksmappen dekker bildet med mindre shareImage er satt.
- */
+/** Metadata for en saksside — eksplisitt og:image uten dynamisk query-hash. */
 export function buildCaseMetadata(share: CaseShare): Metadata {
   const path = casePath(share);
-  const images = openGraphImages(share.shareImage);
+  const imagePath = defaultCaseOgPath(share);
+  const images = [ogImageEntry(imagePath, share.title)];
 
   return {
     title: `${share.title} | ${SITE_NAME}`,
@@ -60,13 +65,13 @@ export function buildCaseMetadata(share: CaseShare): Metadata {
       type: "article",
       locale: "nb_NO",
       siteName: SITE_NAME,
-      ...(images ? { images } : {}),
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title: share.title,
       description: share.summary,
-      ...(images ? { images: [share.shareImage!] } : {}),
+      images: [imagePath],
     },
   };
 }
