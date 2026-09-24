@@ -40,7 +40,10 @@ Behold dagens design som utgangspunkt. Navn, linjeskift og formuleringer er bevi
 | `content/cases/statsbudsjettet-2027.ts` | Statsbudsjett 2027: watch-områder og tidslinje |
 | `content/representatives/` | Felles representantdata |
 | `content/case-contacts/` | Saksvise kontaktforslag (eldre modell) |
-| `components/case-process-label.tsx` | Prosessikoner (høring / kontakt politiker) |
+| `components/share-case-button.tsx` | «Del saken»: Web Share / kopier canonical URL |
+| `content/cases/share.ts` | Tittel, sammendrag og slug til deling/OG per sak |
+| `lib/case-metadata.ts` | Felles Metadata (canonical, Open Graph, Twitter) |
+| `lib/og-image.tsx` | Genererte delingskort 1200×630 |
 | `components/action-example.tsx` | Eksempel på hva leseren kan skrive |
 | `components/challenge-position.tsx` | Handlingstype: utfordre et standpunkt |
 | `components/political-history.tsx` | Kompakt politisk historikk |

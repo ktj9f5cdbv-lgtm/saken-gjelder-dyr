@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import { Header, Footer } from "../../site-parts";
 import { CaseProcessLabel } from "@/components/case-process-label";
 import { ActionExample } from "@/components/action-example";
+import { ShareCaseButton } from "@/components/share-case-button";
 import { ACTION_TYPE_LABELS } from "@/content/action-types";
 import { caseActionTypes } from "@/content/cases/registry";
+import { caseShare } from "@/content/cases/share";
+import { absoluteUrl } from "@/content/site";
+import { buildCaseMetadata } from "@/lib/case-metadata";
 
-export const metadata: Metadata = {
-  title: "Utstyr til hest | Saken gjelder dyr",
-};
+const share = caseShare.hester;
+
+export const metadata: Metadata = buildCaseMetadata(share);
 
 const hearingInfo = "https://www.mattilsynet.no/hoeringer?bId=3994";
 const hearingSubmit = "https://hoering.mattilsynet.no/Hoering/3994";
@@ -114,6 +118,11 @@ export default function HorseCase() {
           <a className="coral-button" href={hearingSubmit} target="_blank" rel="noopener noreferrer">
             Gå til høringstjenesten <span aria-hidden="true">↗</span>
           </a>
+          <ShareCaseButton
+            title={share.title}
+            text={share.summary}
+            url={absoluteUrl(`/saker/${share.slug}`)}
+          />
           <p className="action-context">
             Dette er en høringsuttalelse til Mattilsynet, ikke en henvendelse til Stortinget. Trenger du hjelp til å kontakte en politiker i andre saker, se{" "}
             <a href="/pavirk/stortingsrepresentant">veiledningen om stortingsrepresentanter</a>.

@@ -5,6 +5,7 @@ import { CaseContactModule } from "@/components/case-contact-module";
 import { CaseProcessLabel } from "@/components/case-process-label";
 import { ActionExample } from "@/components/action-example";
 import { PoliticalHistory } from "@/components/political-history";
+import { ShareCaseButton } from "@/components/share-case-button";
 import { griserContact } from "@/content/case-contacts/griser";
 import {
   griserActionType,
@@ -15,13 +16,14 @@ import {
   sporsmalBastholm,
   hearingFoedebinger,
 } from "@/content/cases/griser";
+import { caseShare } from "@/content/cases/share";
+import { absoluteUrl } from "@/content/site";
 import { ACTION_TYPE_LABELS } from "@/content/action-types";
+import { buildCaseMetadata } from "@/lib/case-metadata";
 
-export const metadata: Metadata = {
-  title: "Bedre regler for griser | Saken gjelder dyr",
-  description:
-    "Stortinget har vedtatt at regelverket for hold av svin skal endres. Du kan be om oppfølging av vedtak 563 — status og tidsplan.",
-};
+const share = caseShare.griser;
+
+export const metadata: Metadata = buildCaseMetadata(share);
 
 export default function PigCase() {
   return (
@@ -120,6 +122,11 @@ export default function PigCase() {
               Finn kontaktinformasjon <span aria-hidden="true">→</span>
             </a>
           </p>
+          <ShareCaseButton
+            title={share.title}
+            text={share.summary}
+            url={absoluteUrl(`/saker/${share.slug}`)}
+          />
         </section>
 
         <CaseContactModule

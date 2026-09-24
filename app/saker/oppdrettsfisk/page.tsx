@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import { Header, Footer } from "../../site-parts";
 import { CaseProcessLabel } from "@/components/case-process-label";
 import { ActionExample } from "@/components/action-example";
+import { ShareCaseButton } from "@/components/share-case-button";
 import { ACTION_TYPE_LABELS } from "@/content/action-types";
 import { caseActionTypes } from "@/content/cases/registry";
+import { caseShare } from "@/content/cases/share";
+import { absoluteUrl } from "@/content/site";
+import { buildCaseMetadata } from "@/lib/case-metadata";
 
-export const metadata: Metadata = {
-  title: "Gi innspill om fiskevelferd i oppdrett | Saken gjelder dyr",
-  description:
-    "Nærings- og fiskeridepartementet tar imot skriftlige innspill om hvordan oppdrett skal reguleres. Et sentralt spørsmål er lavere dødelighet og bedre fiskevelferd.",
-};
+const share = caseShare.oppdrettsfisk;
+
+export const metadata: Metadata = buildCaseMetadata(share);
 
 const innspill =
   "https://www.regjeringen.no/no/dokumenter/innspill-til-oppfolgingen-av-havbruksmeldingen/id3158388/";
@@ -121,6 +123,11 @@ export default function FarmedFishCase() {
               Send innspill <span aria-hidden="true">→</span>
             </a>
           </p>
+          <ShareCaseButton
+            title={share.title}
+            text={share.summary}
+            url={absoluteUrl(`/saker/${share.slug}`)}
+          />
           <p className="action-context">
             Innspillet går til Nærings- og fiskeridepartementet via den digitale
             postkassen på regjeringen.no. Tilpass teksten slik at du står inne

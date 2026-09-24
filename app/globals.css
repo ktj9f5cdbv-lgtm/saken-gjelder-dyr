@@ -459,6 +459,44 @@ footer p { margin: 0; }
   outline: 2px solid var(--coral);
   outline-offset: 3px;
 }
+
+/* Sekundær deling — visuelt underordnet coral-button / politisk handling */
+.case-share {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+.share-case-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 14px;
+  margin: 0;
+  border: 1px solid var(--hairline);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--ink);
+  font: 400 0.9375rem/1.4 Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.share-case-button:hover {
+  border-color: var(--muted);
+  color: var(--navy);
+}
+.share-case-button:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+.case-share .copy-status {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
 .rep-email-actions .copy-status {
   margin: 0;
   width: 100%;

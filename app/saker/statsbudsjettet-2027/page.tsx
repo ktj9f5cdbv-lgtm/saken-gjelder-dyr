@@ -2,18 +2,20 @@ import type { Metadata } from "next";
 import { Header, Footer } from "../../site-parts";
 import { CaseProcessLabel } from "@/components/case-process-label";
 import { PoliticalHistory } from "@/components/political-history";
+import { ShareCaseButton } from "@/components/share-case-button";
 import {
   budgetTimeline,
   sources,
   statsbudsjettStatusLine,
   watchAreas,
 } from "@/content/cases/statsbudsjettet-2027";
+import { caseShare } from "@/content/cases/share";
+import { absoluteUrl } from "@/content/site";
+import { buildCaseMetadata } from "@/lib/case-metadata";
 
-export const metadata: Metadata = {
-  title: "Statsbudsjettet 2027: Dette følger vi med på | Saken gjelder dyr",
-  description:
-    "7. oktober legger regjeringen fram sitt forslag til statsbudsjett for 2027. Vi følger forslag som kan få betydning for dyr gjennom Stortingets behandling.",
-};
+const share = caseShare["statsbudsjettet-2027"];
+
+export const metadata: Metadata = buildCaseMetadata(share);
 
 export default function Statsbudsjett2027Page() {
   return (
@@ -129,6 +131,11 @@ export default function Statsbudsjett2027Page() {
             å gi innspill. Konkrete konflikter kan bli egne saker — denne siden
             er oversikten.
           </p>
+          <ShareCaseButton
+            title={share.title}
+            text={share.summary}
+            url={absoluteUrl(`/saker/${share.slug}`)}
+          />
         </section>
 
         <section className="case-block" aria-labelledby="kilder">

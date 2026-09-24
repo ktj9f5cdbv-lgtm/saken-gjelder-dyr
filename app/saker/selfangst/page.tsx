@@ -3,6 +3,7 @@ import { Header, Footer } from "../../site-parts";
 import { CaseProcessLabel } from "@/components/case-process-label";
 import { PoliticalHistory } from "@/components/political-history";
 import { ChallengePositionModule } from "@/components/challenge-position";
+import { ShareCaseButton } from "@/components/share-case-button";
 import {
   selfangstActionType,
   selfangstHistory,
@@ -19,13 +20,14 @@ import {
   venstreBudsjett2025,
   mdgProgram,
 } from "@/content/cases/selfangst";
+import { caseShare } from "@/content/cases/share";
+import { absoluteUrl } from "@/content/site";
 import { ACTION_TYPE_LABELS } from "@/content/action-types";
+import { buildCaseMetadata } from "@/lib/case-metadata";
 
-export const metadata: Metadata = {
-  title: "Statsstøtte til selfangst | Saken gjelder dyr",
-  description:
-    "Forslag om å fjerne statsstøtten ble behandlet i 2024 uten flertall. Partiene som motsatte seg avvikling hadde ulike begrunnelser — du kan stille tilpassede spørsmål.",
-};
+const share = caseShare.selfangst;
+
+export const metadata: Metadata = buildCaseMetadata(share);
 
 export default function SealHuntCase() {
   return (
@@ -167,6 +169,12 @@ export default function SealHuntCase() {
           intro="Forslaget om å fjerne støtten fikk ikke flertall. Partiene som sto bak tilrådingen hadde ulike begrunnelser — og noen har nyere dokumenterte posisjoner. Du kan kontakte et parti og stille et spørsmål som treffer akkurat det standpunktet."
           parties={selfangstChallengeParties}
           mailSubject="Statsstøtte til selfangst"
+        />
+
+        <ShareCaseButton
+          title={share.title}
+          text={share.summary}
+          url={absoluteUrl(`/saker/${share.slug}`)}
         />
 
         <p className="article-meta case-verified">

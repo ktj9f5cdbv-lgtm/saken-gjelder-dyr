@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { buildSiteMetadata } from "@/lib/case-metadata";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sakengjelderdyr.no"),
-  title: "Saken gjelder dyr",
-  description:
-    "Når beslutninger som gjelder dyr kan påvirkes, viser vi deg hva saken gjelder og hva du kan gjøre.",
+  ...buildSiteMetadata(),
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: "/",
   },
   icons: {
     icon: "/favicon.svg",
