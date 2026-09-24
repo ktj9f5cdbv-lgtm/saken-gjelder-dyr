@@ -7,5 +7,7 @@ node_modules
 .vinext
 dist
 archive/chatgpt-export
-*.png
 .git
+# Ikke ignorer public/og/*.png — de er og:image for deling
+.tmp-icon-crops/
+*.tsbuildinfo
